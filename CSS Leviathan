@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+
+    --cor-fundo: #000000;
+    --cor-letra: #80B1DF;
+    --fonte-principal: Roboto;
+    --cor-footer: #232426;
+    --barra-pesquisa: #2B2B2B;
+    --destaque: #211F1F;
+    --cor-botao: #007AFF;
+    --preco-antes: #B2A0A0;
+    --descricao-footer: #7C6E6E;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    color: var(--cor-letra);
+    align-items: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+}
+
+.internet,
+.descobrir{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header-right button{
+    padding: 10px;
+    margin-left: 0.9rem;
+}
+
+.botao_entrar{
+    background-color: var(--cor-fundo);
+    border: transparent;
+}
+
+.botao_cadastrar a{
+    color: white;
+}
+
+.botao_cadastrar{
+    background-color: var(--cor-letra);
+    border: transparent;
+}
+
+
+.link_header:hover,
+.descobrir:hover{
+    color: white;
+}
+
+.header-right button:hover{
+    scale: 1.1  ;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-letra) ;
+}
+
+.seta{
+    padding: 5px;
+}
+
+.barra_pesquisa{
+    background-color: var(--barra-pesquisa);
+    padding: 15px 15px;
+    align-items: center;
+    border-radius: 100px;
+    margin: 3rem;
+    margin-left: 10rem;
+    width: 200px;
+    height: 1rem;
+}
+
+.escrita_pesquisa{
+    background: transparent;
+    border: transparent;
+    color: white;
+    outline: 0  ;
+}
+
+.jogos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+}
+
+.nome_jogo_skul{
+    margin-bottom: 2rem;
+}
+
+.texto_skul{
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.texto_skul2{
+    color: white;
+    margin-bottom: 4rem;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.botao_economizar{
+    padding: 15px;
+    border-radius: 10px;
+    border: transparent;
+    background: #FFFFFF;
+}
+
+.link_economizar{
+    color: black;
+    font-weight: 600;
+}
+
+.link_desejos{
+    color: white;
+    font-weight: 600;
+}
+
+.botao_desejos{
+    padding: 15px;
+    border-radius: 12px;
+    border: transparent;
+    background: #000000;
+    margin-left: 0.8rem;
+}
+
+.botao_desejos:hover,
+.botao_economizar:hover{
+    scale: 1.1;
+}
+
+.minecraft,
+.doom,
+.spider-man,
+.skul{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+
+.nome_minecraft,
+.nome_doom,
+.nome_spider,
+.nome_skul{
+    margin-left: 1rem;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nome_minecraft:hover,
+.nome_doom:hover,
+.nome_spider:hover,
+.nome_skul:hover{
+    scale: 1.1;
+}
+
+.nossos_principais{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 14rem;
+    margin-right: 14rem;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.vermais_principais{
+    color: white;
+}
+
+.vermais_principais:hover{
+    scale: 1.1;
+}
+
+.jogos_principais{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-right: 0;
+    margin-left: 0;
+
+}
+
+
+.rocket_league{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.fortnite{
+    margin-left: 5rem;
+}
+
+.red_dead{
+    margin-right: 5rem;
+}
+    
+.nome_do_jogo{
+    color: white;
+    font-size: 25px;
+}
+
+.nome_do_jogo:hover{
+    scale: 3;
+}
+
+.preco{
+    margin-top: 1rem;
+    color: rgb(216, 216, 216);
+
+}
+
+
+
+.parte_destaque{
+    padding: 4rem;
+    margin-right: 14rem;
+    margin-left: 14rem;
+    margin-top: 4rem;
+    background-color: var(--destaque);
+    border-radius: 50px;
+}
+
+.estrela{
+    display: flex;
+    align-items: center;
+}
+
+.destaques{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo_destaque{
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.jogos_destaques{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8rem;
+    margin-top: 2.5rem;
+}
+
+.deathloop{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.botao_vermais{
+    border-radius: 100px;
+    height: 2.5rem;
+    width: 6rem;
+    color: white;
+    background-color: var(--cor-letra);
+    border: transparent;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.disponivel_embreve{
+    text-align: center;
+    color: white;
+    background-color: #80B1DF;
+    margin-top: 0;
+}
+
+.embreve{
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-top: 0;
+}
+
+.nome_two,
+.nome_death,
+.nome_nba{
+    font-size: 25px;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.nome_jogos{
+    color: white;
+}
+
+.nome_jogos:hover{
+    scale: 3;
+}
+
+.preco_destaque{
+    display: flex;
+}
+
+.porcento{
+    color: white;
+    background-color: var(--cor-botao);
+    width: 65px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 100px;
+}
+
+.preco_antes{
+    color: var(--preco-antes);
+    text-decoration: line-through;
+    margin-right: 0.6rem;
+}
+
+.preco_agr{
+    color: white;
+    margin-right: 0.4rem;
+}
+
+.data{
+    color: var(--preco-antes);
+}
+
+.container_novidade{
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: 6rem;
+    
+}
+
+.conteudo_novidade{
+    display: flex;
+    justify-content: space-between;
+}
+
+.novidades{
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 49px;
+    font-weight: 500;
+}
+
+.snopdog h2,
+.adventure_time h2,
+.loiro_barbie h2{
+    margin-top: 1rem;
+    color: white;
+}
+
+.snopdog p,
+.adventure_time p,
+.loiro_barbie p{
+    margin-top: 1rem;
+    color: #7C6E6E;
+    font-weight: 600;
+}
+
+ul{
+    list-style: none;
+    margin-right: 10rem;
+}
+
+li{
+    color: white;
+    margin-bottom: 0.4rem;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.descricao,
+.link_footer{
+    color: var(--descricao-footer);
+    margin-bottom: 1rem;
+}
+
+.link_footer:hover{
+    color: white;
+}
+
+.redes_sociais{
+    display: flex;
+}
+
+.face,
+.x,
+.insta{
+    margin-right: 3rem;
+    height:50px;
+    width: 50px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    background-color: var(--cor-footer);
+    margin-top: 8rem;
+}
+
