@@ -1,0 +1,28 @@
+.estrela {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .icone_estrela {
+    fill: #ffffff;
+    animation: corBrilhante 2s infinite ease-in-out;
+  }
+  
+  .titulo_destaque {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  @keyframes corBrilhante {
+    0%   { fill: white; }
+    25%  { fill: gold; }
+    50%  { fill: orange; }
+    75%  { fill: yellow; }
+    100% { fill: white; }
+  }
+  
