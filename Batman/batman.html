@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman</title>
+    <link rel="icon" type="image/png" href="imagem/logo.png"> 
+    <link rel="stylesheet" href="./batman.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="video-background-container">
+        <video autoplay muted loop id="background-video">
+            <source src="./imagem/video gameplay.mp4.webm.mp4" type="video/mp4"> 
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="page-content-wrapper"> 
+        <header class="header">
+            <div class="header-left">
+                <a href="../Menu/main.html" class="logo-link">
+                    <img src="./imagem/logo.png" alt="Logo do Site" class="site-logo">
+                </a>
+                <a href="../Menu/main.html"></a>
+                <nav class="main-nav">
+                    <a href="#">Suporte</a>
+                </nav>
+            </div>
+            <div class="header-center">
+                <nav class="secondary-nav">
+                    <a href="#">Descobrir</a>
+                    <a href="#">Navegar</a>
+                    <a href="#">Novidades</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar loja">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="auth-buttons">
+                    <a href="../Menu/Entrar e cadastrar/Entrar.html" class="btn-auth">Entrar</a>
+                    <a href="../Menu/Entrar e cadastrar/Cadastrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-page-content">
+            <section class="game-info-section">
+                <div class="game-details">
+                    <h1>Batman Arkham Night</h1>
+                    <div class="game-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-value">3.5</span>
+                        <i class="fas fa-gamepad rating-icon"></i>
+                    </div>
+                    <nav class="game-tabs">
+                        <a href="#overview-wrapper" class="tab-item active" data-tab="overview">Visão Geral</a>
+                        <a href="#genres-content" class="tab-item" data-tab="genres">Gêneros</a>
+                    </nav>
+                </div>
+
+                <div class="tab-content-container">
+                    <div id="overview-wrapper" class="tab-content active">
+                        <div class="game-media-carousel">
+                            <div class="main-media">
+                                <img src="./imagem/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Fortnite Main Image" id="mainGameImage">
+                            </div>
+                            <div class="thumbnails">
+                                <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
+                                <div class="thumbnail-items">
+                                    <img src="./imagem/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Thumbnail Fortnite Raiz" class="thumbnail active" data-image="pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png">
+                                    <img src="./imagem/landscape_comp.jpeg" alt="Thumbnail Landscape Comp" class="thumbnail" data-image="landscape_comp.jpeg">
+                                    <img src="./imagem/landscape_comp (1).jpeg" alt="Thumbnail Landscape Comp 1" class="thumbnail" data-image="landscape_comp (1).jpeg">
+                                    <img src="./imagem/landscape_comp (2).jpeg" alt="Thumbnail Landscape Comp 2" class="thumbnail" data-image="landscape_comp (2).jpeg">
+                                </div>
+                                <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="overview-text-section">
+                            </div>
+                    </div>
+
+                    <div id="genres-content" class="tab-content">
+                        <h2>Gêneros Principais</h2>
+                        <ul>
+                            <li>Batman: Arkham Knight é um jogo eletrônico de ação e aventura, com elementos de luta e exploração em um mundo aberto. O jogo é o quarto título principal da série Batman: Arkham e o último da desenvolvedora Rocksteady Studios a concluir a história iniciada em Arkham Asylum. </li>
+                            <li>O jogo se destaca pela sua jogabilidade que combina combate, exploração, uso do Batmóvel e resolução de quebra-cabeças, tudo ambientado em uma Gotham City expandida e detalhada. Além da história principal, o jogo oferece diversas missões secundárias e desafios, incluindo os do Charada, que adicionam profundidade ao mundo e aos personagens. </li>
+                            <li>Ação e Aventura:
+                                Combate, exploração e investigação são elementos centrais da jogabilidade. </li>
+                            <li>Ação e Aventura: Combina elementos de combate, exploração e progressão.</li>
+                            <li>Mundo Aberto:
+                                Gotham City é um vasto cenário para explorar, com diferentes ilhas e áreas. </li>
+                            <li>Missões Secundárias e Desafios:
+                                Além da história principal, o jogo oferece diversas missões com foco em outros personagens e desafios com recompensas. </li>
+                        </ul>
+                        <h3>Sub-Gêneros e Elementos:</h3>
+                        <ul>
+                            <li>Furtividade:
+                                Batman pode usar suas habilidades de furtividade para eliminar inimigos silenciosamente ou se mover sem ser detectado.</li>
+                            <li>Exploração:
+                                A vasta Gotham City oferece inúmeros locais para explorar, incluindo edifícios, becos e áreas subterrâneas.</li>
+                            <li>Jogo de Carro:
+                                O Batmóvel é um elemento central do jogo, com diversas missões e desafios que o envolvem.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <aside class="game-sidebar">
+                <div class="sidebar-details">
+                    <p>Desenvolvedor: <span> Rocksteady Studios, Feral Interactive, Iron Galaxy Studios</span></p>
+                    <p>Editora: <span>Darkside/span></p>
+                    <p>Data de Lançamento: <span>23/06/15</span></p>
+                </div>
+                <div class="age-rating-box">
+                    <div class="age-number">18</div>
+                    <div class="age-text">
+                        <p>18 Anos</p>
+                        <small>Sangue, Linguagem, Temas Sugestivos e Violência</small>
+                    </div>
+                </div>
+                <div class="buy-options">
+                    <button class="btn btn-primary">Obter</button>
+                    <button class="btn btn-secondary">Adicionar ao Carrinho</button>
+                    <button class="btn btn-secondary">Para a lista de Desejos</button>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Sobre Nós</h4>
+                    <ul>
+                        <li><a href="#">Informações</a></li>
+                        <li><a href="#">Contatos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Início</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-info">
+                    <h4>Informações</h4>
+                    <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade, segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="batman.js"></script>
+
+</body>
+</html>
