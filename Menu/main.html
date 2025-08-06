@@ -2,24 +2,36 @@
 <html lang="pt-br">
 
 <head>
+    <!--Parte principal que monta o codigo-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Titulo da pagina-->
     <title>Leviathan</title>
+
+    <!--Icone que fica ao lado do nome da pagina-->
     <link rel="icon" href="./imagem/logo.png">
+
+    <!--link com o stylemain.css para o CSS do site-->
     <link rel="stylesheet" href="./style/stylemain.css">
 
 </head>
 
 <body>
+    <!--Header com todos os codigos do site-->
     <header class="header">
+
+        <!--Divisão da esquerda-->
         <div class="header-left">
             <a href="#" class="logo-link">
-                <img src="./imagem/logo.png" alt="Logo do Site" class="site-logo">
+                <img src="./imagem/logo.png" alt="Logo do Site" class="logo-site">
             </a>
             <nav class="main-nav">
-                <a href="#">Suporte</a>
+                <a href="#" class="suporte-nav">Suporte</a>
             </nav>
         </div>
+        
+        <!--Dvisão central-->
         <div class="header-center">
             <nav class="secondary-nav">
                 <a href="#">Descobrir</a>
@@ -27,6 +39,8 @@
                 <a href="#">Novidades</a>
             </nav>
         </div>
+
+        <!--Divisão da direita-->
         <div class="header-right">
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar loja">
@@ -37,9 +51,13 @@
                 <a href="../Menu/Entrar e cadastrar/Cadastrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
             </div>
         </div>
+        
     </header>
     
+    <!--Container de jogos principais e lista de jogos-->
     <section class="jogos">
+
+        <!--Divisão do jogo em destaque aberto-->
         <div class="jogo_principal">
             <img src="./imagem/Nome do jogo Skul.png" alt="nome.png" width="300px" class="nome_jogo_skul">
 
@@ -52,6 +70,7 @@
             <button class="botao_desejos"><a class="link_desejos" href="#">Lista de desejos</a></button>
         </div>
 
+        <!--Video do jogo em destaque aberto-->
         <div class="video_jogo_principal">
             <video autoplay muted loop id="Video trailer - Skul the Hero Slayer" width="860px">
                 <source src="./imagem/Video trailer - Skul the Hero Slayer.mp4">
@@ -59,7 +78,10 @@
            
         </div>
 
+        <!--Lista de jogos do ao lado do jogo em destaque aberto-->
         <div class="jogos_ao_lado">
+
+            <!--Jogo Skul: The Hero Slayer-->
             <div class="skul">
                 <a href="#">
                     <img src="./imagem/Skul.png" alt="skul.png" width="110px">
@@ -67,6 +89,7 @@
                 <a class="nome_skul" href="#">Skul: The Hero Slayer</a>
             </div>
 
+            <!--Jogo Spider-man-->
             <div class="spider-man">
                 <a href="#">
                     <img src="./imagem/Spider Man.png" alt="spider.png" width="110px">
@@ -74,6 +97,7 @@
                 <a class="nome_spider" href="#">Marvel's Spider-Man</a>
             </div>
 
+            <!--Jogo Elden Ring-->
             <div class="doom">
                 <a href="#">
                     <img src="./imagem/Elden Ring.jpg" alt="elden ring.png" width="110px">
@@ -81,13 +105,16 @@
                 <a class="nome_elden" href="#">ELDEN RING</a>
             </div>
 
+            <!--Jogo Batman Arkhan Knight-->
             <div class="minecraft">
                 <a href="../Batman/batman.html">
                     <img src="./imagem/Batman_Arkham_Knight_Capa.jpg" alt="roblox.png" width="100px">
                 </a>
                 <a class="nome_roblox" href="../Batman/batman.html">Batman Arkhan Night   </a>
             </div>
+
         </div>
+        
     </section>
 
     <!--parte dos jogos principais que liga a loja geral-->
@@ -97,9 +124,12 @@
         <a class="vermais_principais" href="#">Ver mais</a>
     </div>
 
+    <!--Jogos principais-->
     <section class="jogos_principais">
+
+        <!--jogo god of war-->
         <div class="god_of_war">
-            <a href="#">
+            <a href="../God_of_War/God.html">
                 <img src="./imagem/God of War.png" alt="god of war.png" width="200px">
             </a>
            
@@ -107,6 +137,7 @@
             <p class="preco">R$ 199,92</p>
         </div>
 
+        <!--jogo fortnite-->
         <div class="fortnite">
             <a href="../Fortnite/Fortnite.html">
                 <img src="./imagem/Fortnite.png" alt="fortnite.png" width="180px">
@@ -115,6 +146,7 @@
             <p class="preco">Gratis</p>
         </div>
 
+        <!--Jogo Rocket League-->
         <div class="rocket_league">
             <a href="">
                 <img src="./imagem/Rocket League.png" alt="rocket league.png" width="200px">
@@ -123,6 +155,7 @@
             <p class="preco">Gratis</p>
         </div>
 
+        <!--Jogo Red Dead Redemption\-->
         <div class="red_dead">
             <a href="#">
                 <img src="./imagem/Red Dead Redemption 2.png" alt="red dead redemption 2.png" width="200px">
@@ -131,6 +164,7 @@
             <p class="preco">R$ 220,00</p>
         </div>
 
+        <!--Jogo Fifa-->
         <div class="fifa">
             <a href="#">
                 <img src="./imagem/FIFA 2025.png" alt="fifa 2025.png" width="200px">
@@ -138,13 +172,18 @@
             <a class="nome_do_jogo" href="#"><br>Edição <br>Standard do <br>EA SPORTS FC™ 25</a>
             <p class="preco">R$ 89,70</p>
         </div>
+
     </section>
 
 
 
     <!--parte dos destaques-->
     <section class="parte_destaque">
+
+        <!--parte dos destaques-->
         <div class="destaques">
+
+            <!--Parte do titulo e do botao ver mais-->
             <div class="estrela">
                 <svg class="icone_estrela" width="65" height="65" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5 12 2" />
@@ -153,11 +192,13 @@
                 <p class="titulo_destaque">Destaques</p>
             </div>
               
-
             <button class="botao_vermais"><a class="botao_vermais" href="#">Ver mais</a></button>
         </div>
 
+        <!--Jogos nos destaques-->
         <div class="jogos_destaques">
+
+            <!--Jogo NBA-->
             <div class="nba_2k25">
                 <a href="#">
                     <img src="./imagem/NBA 2K25.png" alt="nba 2k25.png" width="400px" class="imagem_nba">
@@ -177,6 +218,7 @@
                 </div>
             </div>
 
+            <!--Jogo Deathloop-->
             <div class="deathloop">
                 <a href="#">
                     <img src="./imagem/DEATHLOOP.png" alt="deathloop.png" width="418px" class="imagem_death">
@@ -188,14 +230,13 @@
                     <a class="nome_jogos" href="#">Deathloop</a>
                 </div>
 
-                <div class="preco_destaque">
-                    <p class="porcento">-70%</p>
-                    <p class="preco_antes">R$ 200,19*</p>
+                <div class="preco_destaque">    
                     <p class="preco_agr">Gratis</p>
                     <p class="data">18 de Nov As 12:00</p>
                 </div>
             </div>
 
+            <!--Jogo Two Point Hospital-->
             <div class="two_point_hospital">
                 <a href="#">
                     <img src="./imagem/TWO POINT HOSPITAL.png" alt="two point hospital.png" width="400px" class="imagem_two">
@@ -212,7 +253,9 @@
                     <p class="preco_agr">Gratis</p>
                     <p class="data">12 jun - 18 jun</p>
                 </div>
+
             </div>
+
         </div>
     </section>
 
@@ -222,7 +265,10 @@
     <section class="container_novidade">
         <h2 class="novidades">Novidades</h2>
 
+        <!--Conteudos novos!-->
         <div class="conteudo_novidade">
+
+            <!--Novidade 1-->
             <div class="snopdog">
                 <img src="./imagem/SnopDog.png" alt="Fortnite.png" width= "420px">
 
@@ -231,6 +277,7 @@
                 <p>De Long Beach para o mundo. É hora <br>de soltar os cachorros com o ícone <br>Musical Snoop Dogg!</p>
             </div>
 
+            <!--novidade 2-->
             <div class="adventure_time">
                 <img src="./imagem/AdventureTime.png" alt="hora de aventura.png" width= "420px">
 
@@ -239,6 +286,7 @@
                 <p>A parada vai ficar medonha! Embarque <br>em uma aventura com Finn, o humano, <br>jake, o cão, princesa jujuba e marceline.</p>
             </div>
 
+            <!--novidade 3-->
             <div class="loiro_barbie">
                 <img src="./imagem/Loiro e Barbie.png" alt="Fortnite.png" width= "420px">
 
