@@ -45,7 +45,7 @@ body{
     align-items: center;
   }
   
-  .site-logo {
+  .logo-site {
     height: 40px;
     width: auto;
     margin-right: 20px;
@@ -207,15 +207,47 @@ a{
     transform: scale(1.1);
 }
 
-.minecraft,
-.doom,
+.batman,
+.elden,
 .spider-man,
 .skul{
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     margin: 1rem;
+    padding: 8px;
+    border-radius: 15px;
 }
 
+.skul:hover::before,
+.elden:hover::before,
+.spider-man:hover::before,
+.batman:hover::before{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+         rgba(146, 146, 146, 0.336),
+         transparent);
+    animation: loading 1s infinite;
+}
+
+
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+
+
+    100% {
+        left: 100%;
+    }
+}
 
 .nome_roblox,
 .nome_elden,
@@ -346,9 +378,14 @@ a{
     margin-top: 2.5rem;
 }
 
-.deathloop{
+.valorant{
     margin-left: 2rem;
     margin-right: 2rem;
+}
+
+.imagem_gta{
+    width: 420px;
+    height: 226px;
 }
 
 .botao_vermais{
@@ -381,8 +418,8 @@ a{
     margin-top: 0;
 }
 
-.nome_two,
-.nome_death,
+.nome_gta,
+.nome_vava,
 .nome_nba{
     font-size: 25px;
     margin-top: 0.8rem;
@@ -390,8 +427,8 @@ a{
     transition: transform 0.3s ease;
 }
 
-.nome_two:hover,
-.nome_death:hover,
+.nome_gta:hover,
+.nome_vava:hover,
 .nome_nba:hover{
     transform: scale(1.01);
 }
@@ -454,16 +491,33 @@ a{
     font-weight: 500;
 }
 
+.snopdog img,
+.jogos_promocao img,
+.jogo_novos img{
+    border-radius: 15px;
+}
+
+.jogos_promocao a,
+.jogo_novos a{
+    text-decoration: none;
+    font-size: 26px;
+    align-items: center;
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
 .snopdog h2,
-.adventure_time h2,
-.loiro_barbie h2{
+.jogo_novos h2,
+.jogos_promocao h2{
     margin-top: 1rem;
     color: white;
 }
 
 .snopdog p,
-.adventure_time p,
-.loiro_barbie p{
+.jogo_novos p,
+.jogos_promocao p{
     margin-top: 1rem;
     color: #7C6E6E;
     font-weight: 600;
@@ -482,9 +536,11 @@ li{
 }
 
 
+.icone_estrela{
+    animation: corbrilhante 1.5s infinite;
+}
 
-
-  @keyframes corBrilhante {
+  @keyframes corbrilhante {
     0%   { fill: rgb(255, 122, 122); }
     25%  { fill: gold; }
     50%  { fill: rgb(115, 241, 111); }
