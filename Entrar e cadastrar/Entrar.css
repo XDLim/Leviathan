@@ -1,0 +1,163 @@
+/* Definições de variáveis globais */
+:root {
+    --color-primary-blue: #007bff;
+    --color-primary-blue-hover: #0056b3;
+    --color-background-dark: #0a0a0a;
+    --color-background-card: #1c1c1c;
+    --color-text-light: #ffffff;
+    --color-text-muted: #aaaaaa;
+    --color-input-bg: #2c2c2c;
+    --border-radius-sm: 5px;
+    --border-radius-lg: 10px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+}
+
+/* Estilos globais e reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Container principal do formulário */
+.dark-registration-container {
+    max-width: 450px;
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-lg);
+    background-color: var(--color-background-card);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos e textos */
+.dark-registration-container h2 {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+.dark-registration-container p {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Estilo para cada grupo de input */
+.input-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-light);
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #444;
+    border-radius: var(--border-radius-sm);
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--color-input-bg);
+    color: var(--color-text-light);
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--color-primary-blue);
+}
+
+/* Seção de upload da foto de perfil */
+.profile-photo-upload {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.photo-placeholder {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-input-bg);
+    border: 2px dashed #444;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.photo-placeholder:hover {
+    border-color: var(--color-primary-blue);
+    transform: scale(1.05);
+}
+
+.photo-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.upload-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text-muted);
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-placeholder:hover .upload-text {
+    opacity: 1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Botão de envio, com o estilo do botão azul da imagem */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-blue {
+    background-color: var(--color-primary-blue);
+    color: var(--color-text-light);
+}
+
+.btn-blue:hover {
+    background-color: var(--color-primary-blue-hover);
+    transform: translateY(-2px);
+}
