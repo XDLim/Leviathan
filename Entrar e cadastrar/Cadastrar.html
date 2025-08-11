@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./imagem/logo.png">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href=".//Entrar.css">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="./Entrar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="login-card">
-            <h1>Cadastro</h1>
-            <form action="#" method="POST">
-                <div class="input-group">
-                    <label for="name">Nome de usuário</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="input-group">
-                    <label for="confirm-password">Confirmar Senha</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <button type="submit" class="btn">Cadastrar</button>
-            </form>
-            <div class="links">
-                <a href="./Entrar.html">Já tem conta? Faça login</a>
+
+    <div class="dark-registration-container">
+        <h2>Crie sua conta</h2>
+        <p>Preencha os dados abaixo para se cadastrar.</p>
+        
+        <form id="registrationForm" action="#" method="POST" enctype="multipart/form-data">
+            
+            <div class="profile-photo-upload">
+                <input type="file" id="profile-photo" name="profile-photo" accept="image/*" class="visually-hidden">
+                <label for="profile-photo" class="photo-placeholder">
+                    <img id="photo-preview" src="https://via.placeholder.com/150/2c2c2c/ffffff?text=Foto" alt="Foto de Perfil" class="photo-preview">
+                    <span class="upload-text">Enviar Foto</span>
+                </label>
             </div>
-        </div>
+
+            <div class="input-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required placeholder="Crie uma senha forte">
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirme sua senha">
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">CPF</label>
+                <input type="password" id="confirm-cpf" name="confirm-password" required placeholder="Confirme seu CPF">
+            </div>
+
+            <button href="../main.html" type="submit" class="submit-btn btn-blue">Cadastrar</button>
+        </form>
     </div>
+
 </body>
 </html>
