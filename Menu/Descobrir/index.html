@@ -2,102 +2,131 @@
 <html lang="pt-br">
 
 <head>
-    <!--Parte principal que monta o codigo-->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Titulo da pagina-->
     <title>Leviathan</title>
-
-    <!--Icone que fica ao lado do nome da pagina-->
-    <link rel="icon" href="../imagem/logo.png">
-
-    <!--link com o stylemain.css para o CSS do site-->
+    <link rel="icon" href="../Menu/imagem/logo.png">
     <link rel="stylesheet" href="./ddes.css">
+    <script src="ddes.js"></script>
 
 </head>
-
 <body>
-    <!--Header com todos os codigos do site-->
+
     <header class="header">
-
-        <!--Divisão da esquerda-->
-        <div class="header-left">
-            <a href="../index.html" class="logo-link">
-                <img src="../imagem/logo.png" alt="Logo do Site" class="logo-site">
-            </a>
-            <nav class="main-nav">
-                <a href="#" class="suporte-nav">Suporte</a>
-            </nav>
-        </div>
-        
-        <!--Dvisão central-->
-        <div class="header-center">
-            <nav class="secondary-nav">
-                <a href="#">Descobrir</a>
-                <a href="#">Navegar</a>
-                <a href="#">Novidades</a>
-            </nav>
-        </div>
-
-        <!--Divisão da direita-->
-        <div class="header-right">
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar loja">
-                <button><i class="fas fa-search"></i></button>
+            <div class="header-left">   
+                <a href="../Menu/index.html" class="logo-link">
+                    <img src="../imagem/logo.png" alt="Logo do Site" class="site-logo">
+                </a>
+                <nav class="main-nav">
+                    <a href="#">Suporte</a>
+                </nav>
             </div>
-            <div class="auth-buttons">
-                <a href="../Menu/Entrar e cadastrar/Entrar.html" class="btn-auth">Entrar</a>
-                <a href="../Menu/Entrar e cadastrar/Cadastrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
+            <div class="header-center">
+                <nav class="secondary-nav">
+                    <a href="#">Descobrir</a>
+                    <a href="#">Navegar</a>
+                    <a href="#">Novidades</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar loja">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="auth-buttons">
+                    <a href="../Menu/Entrar e cadastrar/Entrar.html" class="btn-auth">Entrar</a>
+                    <a href="../Menu/Entrar e cadastrar/Cadastrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
+                </div>
+            </div>
+        </header>
+
+<main class="discovery-container">
+    <main class="discovery-container">
+
+    <button class="toggle-filters-btn" onclick="toggleFilters()">Filtros</button>
+
+    <aside class="filters-sidebar" id="filters-sidebar">
+        <button class="close-filters-btn" onclick="toggleFilters()">X</button>
+        <div class="filters-header">
+            <h3>Filtros:</h3>
+        </div>
+
+        <div class="filter-group">
+            <h4>Gêneros</h4>
+            <ul>
+                <li><label for="action-adventure">Ação e Aventura</label><input type="checkbox" id="action-adventure"></li>
+                <li><label for="sports">Esportes</label><input type="checkbox" id="sports"></li>
+                <li><label for="horror">Terror</label><input type="checkbox" id="horror"></li>
+                <li><label for="suspense">Suspense</label><input type="checkbox" id="suspense"></li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+            <h4>Valor</h4>
+            <p>R$ 0 - R$ 999</p>
+            <input type="range" min="0" max="999" value="999" class="slider">
+        </div>
+
+        <div class="filter-group">
+            <h4>Linguagem</h4>
+            <ul>
+                <li><label for="portuguese">Português</label><input type="checkbox" id="portuguese"></li>
+                <li><label for="abkhazian">Abcázio</label><input type="checkbox" id="abkhazian"></li>
+                <li><label for="japanese">Japonês</label><input type="checkbox" id="japanese"></li>
+                <li><label for="chinese">Chinês</label><input type="checkbox" id="chinese"></li>
+                <li><label for="english">Inglês</label><input type="checkbox" id="english"></li>
+                <li><label for="russian">Russo</label><input type="checkbox" id="russian"></li>
+                <li><label for="spanish">Espanhol</label><input type="checkbox" id="spanish"></li>
+            </ul>
+            <button class="more-languages-btn">Buscar Mais Idiomas</button>
+        </div>
+    </aside>
+
+    <section class="main-content">
+        <div class="sort-menu">
+            <span class="sort-title">Classificar Por:</span>
+            <a href="#" class="sort-link">Mais Jogados</a>
+            <a href="#" class="sort-link">Novos Jogos</a>
+            <a href="#" class="sort-link">A-Z</a>
+        </div>
+
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="./imagen/28506-peak-pc-capa-1 1.png" alt="Capa do jogo 1">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/71C1sCQwi5L._UF1000,1000_QL80_ 1.png" alt="Capa do jogo 2">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/94C44E50-1ECD-4A3F-A74D-2477218B3939 1.png" alt="Capa do jogo 3">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/marvel-rivals-wq3mr 1.png" alt="Capa do jogo 4">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/LIS_True_Colors_capa 1.png" alt="Capa do jogo 5">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/RotTR_boxart 1.png" alt="Capa do jogo 6">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/Horizon_Zero_Dawn_capa 1.png" alt="Capa do jogo 7">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/Hollow_Knight_first_cover_art.webp 1.png" alt="Capa do jogo 8">
+            </div>
+            <div class="game-card">
+                <img src="./imagen/images 3.png" alt="Capa do jogo 9">
             </div>
         </div>
-        
-    </header>
-    
-    
-
-    
-    <!--Jogos principais-->
-    <section class="jogos_principais">
-
-
-        <!--jogo Marvel-->
-        <div class="Marvel">
-            <a href="">
-                <img src="./imagen/marvel-rivals-wq3mr 1.png" alt="fortnite.png" width="180px">
-            </a>
-            <a class="nome_do_jogo" href=""><br>Marvel Rivals</a>
-            
-        </div>
-
-        
-
-        <!--Jogo Peak-->
-        <div class="Peak">
-            <a href="">
-                <img src="../Descobrir/imagen/28506-peak-pc-capa-1 1.png" alt="" width="200px" height="240px">
-            </a>
-            <a class="nome_do_jogo" href=""><br>PEAK<br> <br></a>
-        </div>
-
-        <!--Jogo Hollow-->
-        <div class="Hollow">
-            <a href="">
-                <img src="./imagen/Hollow_Knight_first_cover_art.webp 1.png" alt="fifa 2025.png" width="200px" height="240">
-            </a>
-            <a class="nome_do_jogo" href="l"><br>Hollow Knight <br><br>
-        </div>
-
-        <div class="Horizon">
-            <a href="">
-                <img src="./imagen/Horizon_Zero_Dawn_capa 1.png" alt="fifa 2025.png" width="200px" height="240">
-            </a>
-            <a class="nome_do_jogo" href="l"><br>Horizon Zero Dawn <br><br>
-        </div>
-
     </section>
+</main>
 
     
+
+        
+</main>
     
     <footer class="footer">
         <div class="footer-columns">
