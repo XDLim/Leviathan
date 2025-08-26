@@ -1,30 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root{
-
-    --cor-fundo: #000000;
-    --cor-letra: #80B1DF;
-    --fonte-principal: Roboto;
-    --cor-footer: #232426;
-    --barra-pesquisa: #2B2B2B;
-    --destaque: #211F1F;
-    --cor-botao: #007AFF;
-    --preco-antes: #B2A0A0;
-    --descricao-footer: #7C6E6E;
-    --cor-botao-cadastrar: #007bff
-
-}
-
-*{
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-body{
-    background-color: var(--cor-fundo);
-    font-family: var(--fonte-principal);
-    color: var(--cor-letra);
-    align-items: center;
+    line-height: 1.6;
 }
 
 .header {
@@ -53,7 +33,6 @@ body{
   
   .main-nav a,
   .secondary-nav a {
-    margin-left: 25px;
     margin-right: 25px;
     font-weight: 500;
     color: #ccc;
@@ -146,753 +125,228 @@ a{
     outline: 0  ;
 }
 
-.jogos{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 4rem;
-    margin-right: 10rem;
-    margin-left: 10rem;
-}
-
-.nome_jogo_skul{
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.nome_jogo_skul:hover{
-    transform: scale(1.03);
-}
-
-.texto_skul{
-    color: white;
-    margin-bottom: 2rem;
-}
-
-.texto_skul2{
-    color: white;
-    margin-bottom: 4rem;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.botao_economizar{
-    padding: 15px;
-    border-radius: 10px;
-    border: transparent;
-    background: #FFFFFF;
-    transition: transform 0.3s ease;
-}
-
-.link_economizar{
-    color: black;
-    font-weight: 600;
-}
-
-.link_desejos{
-    color: white;
-    font-weight: 600;
-}
-
-.botao_desejos{
-    padding: 15px;
-    border-radius: 12px;
-    border: transparent;
-    background: #000000;
-    margin-left: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.botao_desejos:hover,
-.botao_economizar:hover{
-    transform: scale(1.1);
-}
-
-.batman,
-.elden,
-.spider-man,
-.skul{
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin: 1rem;
-    padding: 8px;
-    border-radius: 15px;
-}
-
-.skul:hover::before,
-.elden:hover::before,
-.spider-man:hover::before,
-.batman:hover::before{
-    content: "";
-    position: absolute;
-    width: 70%;
-    height: 100%;
-    background: linear-gradient(
-        to right,
-        transparent,
-         rgba(146, 146, 146, 0.336),
-         transparent);
-    animation: loading 1s infinite;
-}
-
-
-
-@keyframes loading {
-    0% {
-        left: -100%;
-    }
-
-
-    100% {
-        left: 100%;
-    }
-}
-
-.nome_roblox,
-.nome_elden,
-.nome_spider,
-.nome_skul{
-    margin-left: 1rem;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    transition: transform 0.3s ease;
-}
-
-.nome_roblox:hover,
-.nome_elden:hover,
-.nome_spider:hover,
-.nome_skul:hover{
-    transform: scale(1.04);
-}
-
-.nossos_principais{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 14rem;
-    margin-right: 14rem;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-
-}
-
-.vermais_principais{
-    color: white;
-    transition: transform 0.3s ease;
-}
-
-.vermais_principais:hover{
-    transform: scale(1.1);
-}
-
-.jogos_principais{
+/* --- Conteúdo Principal --- */
+.conteudo-principal {
+    padding: 20px;
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-
 }
 
-
-.Marvel:hover,
-.Peak:hover,
-.Horizon,
-.Hollow:hover{
-    transform: scale(1.1);
-}
-
-.H{
-    img {
-       
-      }
-
-}
-
-.Hollow{
-    transition: transform 0.3s ease;
-}
-.Hollow{
-    margin-right: 5rem;
-    margin-left: 5rem;
-    transition: transform 0.3s ease;
-}
-.Horizon{
-    margin-left: 5rem;
-    transition: transform 0.3s ease;
-}
-
-.Marvel{
-    margin-left: 5rem;
-    margin-right: 5rem;
-    transition: transform 0.3s ease;
-}
-
-.Marvel{
-    margin-left: 5rem;
-    transition: transform 0.3s ease;
-}
-
-.Hollow{
-    margin-right: 5rem;
-    transition: transform 0.3s ease;
-}
-   
-.nome_do_jogo {
-    font-size: 25px;
-    color: white;
-}
-
-.imagem_dos_jogos{
+.container-conteudo {
     display: flex;
-}
-
-
-.parte_destaque{
-    padding: 4rem;
-    margin-right: 14rem;
-    margin-left: 14rem;
-    margin-top: 4rem;
-    background-color: var(--destaque);
-    border-radius: 50px;
-}
-
-.estrela{
-    display: flex;
-    align-items: center;
-}
-
-.destaques{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.titulo_destaque{
-    color: white;
-    font-size: 40px;
-    font-weight: 600;
-    margin-left: 1rem;
-}
-
-.jogos_destaques{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 8rem;
-    margin-top: 2.5rem;
-}
-
-.valorant{
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-.imagem_gta{
-    width: 420px;
-    height: 226px;
-}
-
-.botao_vermais{
-    border-radius: 115px;
-    height: 2.5rem;
-    width: 6rem;
-    color: white;
-    background-color: var(--cor-botao-cadastrar);
-    border: transparent;
-    font-size: 16px;
-    font-weight: 500;
-    transition: transform 0.3s ease;
-}
-
-.botao_vermais:hover{
-    transform: scale(1.03);
-}
-
-.disponivel_embreve{
-    text-align: center;
-    color: white;
-    background-color: #80B1DF;
-    margin-top: 0;
-}
-
-.embreve{
-    text-align: center;
-    color: white;
-    background-color: black;
-    margin-top: 0;
-}
-
-.nome_gta,
-.nome_vava,
-.nome_nba{
-    font-size: 25px;
-    margin-top: 0.8rem;
-    margin-bottom: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.nome_gta:hover,
-.nome_vava:hover,
-.nome_nba:hover{
-    transform: scale(1.01);
-}
-
-.nome_jogos{
-    color: white;
-}
-
-.nome_jogos:hover{
-    scale: 3;
-}
-
-.preco_destaque{
-    display: flex;
-}
-
-.porcento{
-    color: white;
-    background-color: var(--cor-botao);
-    width: 65px;
-    text-align: center;
-    margin-right: 10px;
-    border-radius: 100px;
-}
-
-.preco_antes{
-    color: var(--preco-antes);
-    text-decoration: line-through;
-    margin-right: 0.6rem;
-}
-
-.preco_agr{
-    color: white;
-    margin-right: 0.4rem;
-}
-
-.data{
-    color: var(--preco-antes);
-}
-
-.container_novidade{
-    border-radius: 50%;
-    margin-left: 15rem;
-    margin-right: 15rem;
-    margin-top: 6rem;
-    margin: 10rem;
-    
-}
-
-.conteudo_novidade{
-    display: flex;
-    justify-content: space-between;
-    border-radius: 4px;
-}
-
-.novidades{
-    color: white;
-    margin-bottom: 2rem;
-    font-size: 49px;
-    font-weight: 500;
-}
-
-.snopdog img,
-.jogos_promocao img,
-.jogo_novos img{
-    border-radius: 15px;
-}
-
-.jogos_promocao a,
-.jogo_novos a{
-    text-decoration: none;
-    font-size: 26px;
-    align-items: center;
-    display: block;
-    color: white;
-    font-weight: 600;
-    margin-top: 5px;
-}
-
-.snopdog h2,
-.jogo_novos h2,
-.jogos_promocao h2{
-    margin-top: 1rem;
-    color: white;
-}
-
-.snopdog p,
-.jogo_novos p,
-.jogos_promocao p{
-    margin-top: 1rem;
-    color: #7C6E6E;
-    font-weight: 600;
-}
-
-ul{
-    list-style: none;
-    margin-right: 10rem;
-}
-
-li{
-    color: white;
-    margin-bottom: 0.4rem;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-
-.icone_estrela{
-    animation: corbrilhante 1.5s infinite;
-}
-
-  @keyframes corbrilhante {
-    0%   { fill: rgb(255, 122, 122); }
-    25%  { fill: gold; }
-    50%  { fill: rgb(115, 241, 111); }
-    75%  { fill: rgb(120, 163, 255); }
-    100% { fill: rgb(245, 139, 231); }
-  }
-
-#video_jogo_principal{
-    filter: brightness(0.6);
-    object-fit: cover;
-}
-
-.footer {
-    background-color: #000000;
-    border-top: 1px solid #222;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    padding: 4rem;
-    margin-top: auto;
-    width: 100%;
-  }
-  .footer-columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 30px;
+    max-width: 1200px;
     width: 100%;
-    max-width: 1500px;
-  }
-  .footer-col {
-    flex: 1;
-    min-width: 150px;
-  }
-  .footer h4 {
-    font-size: 1.2em;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-  .footer ul {
-    list-style: none;
-  }
-  .footer ul li a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .footer ul li a:hover {
-    color: #007bff;
-  }
-  .footer-info {
-    flex: 2;
-    min-width: 250px;
-  }
-  .footer-info p {
-    color: #aaa;
-  }
-  .social-media {
-    display: flex;
-    gap: 15px;
-  }
-  .social-media a {
-    color: #fff;
-    font-size: 1.5em;
-    transition: color 0.3s;
-  }
-  .social-media a:hover {
-    color: #007bff;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .card-container {
-        padding: 30px 20px;
-    }
-    .card-title {
-        font-size: 1.5em;
-    }
-    .card-subtitle {
-        font-size: 0.9em;
-    }
-    .form-toggle {
-        font-size: 0.9em;
-    }
-    .input-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .social-login {
-        flex-direction: column;
-    }
-  }
+}
 
-  .footer {
-    background-color: #232426;
-    border-top: 1px solid #222;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    padding: 4rem;
-    margin-top: auto;
-    width: 100%;
-  }
-  .footer-columns {
+.corpo-principal {
+    flex: 1;
+}
+
+.barra-filtro-ordenacao {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 1500px;
-  }
-  .footer-col {
-    flex: 1;
-    min-width: 150px;
-  }
-  .footer h4 {
-    font-size: 1.2em;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-  .footer ul {
-    list-style: none;
-  }
-  .footer ul li a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .footer ul li a:hover {
-    color: #007bff;
-  }
-  .footer-info {
-    flex: 2;
-    min-width: 250px;
-  }
-  .footer-info p {
-    color: #aaa;
-  }
-  .social-media {
-    display: flex;
-    gap: 15px;
-  }
-  .social-media a {
-    color: #fff;
-    font-size: 1.5em;
-    transition: color 0.3s;
-  }
-  .social-media a:hover {
-    color: #007bff;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .card-container {
-        padding: 30px 20px;
-    }
-    .card-title {
-        font-size: 1.5em;
-    }
-    .card-subtitle {
-        font-size: 0.9em;
-    }
-    .form-toggle {
-        font-size: 0.9em;
-    }
-    .input-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .social-login {
-        flex-direction: column;
-    }
-  }
-  
-
-  /* Importação de fontes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Reset básico e variáveis */
-:root {
-    --bg-color: #000000;
-    --card-bg-color: #000000;
-    --text-color: #c9d2d8;
-    --secondary-text-color: #6a747c;
-    --accent-color: #4c46d3;
-    --border-color: #21252d;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-a {
-    color: var(--secondary-text-color);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
-/* ----------------------- */
-/* --- Botão "Filtros" --- */
-/* ----------------------- */
-.toggle-filters-btn {
-    display: block; /* O botão estará sempre visível */
-    background-color: #007AFF;
-    color: var(--text-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-top: 40px;
-    margin-left: 40px;
+    align-items: center;
     margin-bottom: 20px;
-    width: 150px; /* Largura fixa para o botão */
-    text-align: center;
 }
 
-/* ----------------------- */
-/* --- Menu Lateral de Filtros (Overlay) --- */
-/* ----------------------- */
-.filters-sidebar {
-    position: fixed; /* O menu fica por cima do conteúdo */
-    top: 0;
-    left: -300px; /* Começa escondido, fora da tela */
-    height: 100%;
-    width: 280px;
-    background-color: var(--card-bg-color);
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    padding: 40px 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    transition: left 0.3s ease-in-out; /* Transição suave */
-}
-
-/* Classe que mostra o menu quando o JavaScript a adiciona */
-.filters-sidebar.active {
-    left: 0;
-}
-
-.close-filters-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: var(--secondary-text-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.filters-header h3 {
-    margin-bottom: 25px;
-    font-weight: 700;
-    color: var(--text-color);
-}
-
-/* ... (Mantenha o resto do CSS dos filtros exatamente igual) ... */
-
-/* ----------------------- */
-/* --- Seção de Jogos (Main Content) --- */
-/* ----------------------- */
-.main-content {
-    flex-grow: 1;
-    margin-bottom: 40px;
-}
-
-.sort-menu {
-    margin-left: 40px;
+.opcoes-ordenacao {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-bottom: 25px;
-    color: var(--text-color);
+    gap: 10px;
+    font-weight: bold;
 }
 
-.sort-title {
-    font-size: 0.9em;
-    color: var(--secondary-text-color);
+.opcoes-ordenacao span {
+    color: #80B1DF;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
-.sort-link {
-    font-weight: 500;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-    color: var(--text-color);
+.botao-ordenacao {
+    color: #ffffff;
+    background-color: #597997;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-.sort-link:hover, .sort-link.active {
-    color: #f0f0f0;
-    
+.botao-ordenacao.ativo {
+    background-color: #80B1DF;
 }
 
-.games-grid {
+.grid-jogos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de igual largura */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.game-card {
-    background-color: var(--card-bg-color);
-    border-radius: 4px;
+.card-jogo {
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 100% solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background-color: #1a1a1a;
 }
 
-.game-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    border-color: #80B1DF;
+.card-jogo:hover {
+    transform: scale(1.03);
 }
 
-.game-card img {
-    width: 350px;
-    height: 350px;
+.card-jogo img {
+    width: 100%;
+    height: 100%; 
     display: block;
-    object-fit: cover;
 }
 
+/* --- Filtros da Barra Lateral --- */
+.sidebar-filtros {
+    width: 250px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
 
+.titulo-filtro {
+    color: #80B1DF;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
 
-@media (max-width: 992px) {
-    /* Não há necessidade de mudar o layout do container, pois o menu é um overlay */
-    .discovery-container {
-        flex-direction: column;
-        padding: 0 20px;
-    }
+.grupo-filtro {
+    margin-bottom: 25px;
+}
+
+.subtitulo-filtro {
+    color: #80B1DF;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.opcao-filtro {
+    color: #80B1DF;
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.opcao-filtro input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #80B1DF;
+}
+
+.barra-intervalo-preco {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.barra-intervalo-preco span {
+    color: #80B1DF;
+    font-size: 0.8em;
+}
+
+.barra-deslizante {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.barra-deslizante::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botao-mais-idiomas {
+    background-color: transparent;
+    border: 1px solid #80B1DF;
+    color: #80B1DF;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* --- Rodapé --- */
+.rodape {
+    background-color: #232426;
+    padding: 40px 20px;
+    border-top: 2px solid #2a2a2a;
+    text-align: center;
+}
+
+.colunas-rodape {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.coluna-rodape {
+    text-align: left;
+    width: 200px;
+}
+
+.coluna-rodape h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.coluna-rodape ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coluna-rodape a {
+    color: #b0b0b0;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.coluna-rodape a:hover {
+    color: #ffffff;
+}
+
+.coluna-info-rodape {
+    width: 300px;
+}
+
+.coluna-info-rodape p {
+    color: #b0b0b0;
+    font-size: 0.9em;
+}
+
+.midia-social {
+    margin-top: 20px;
+}
+
+.midia-social a {
+    color: #b0b0b0;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.midia-social a:hover {
+    color: #ffffff;
 }
