@@ -523,6 +523,14 @@ a{
     font-weight: 600;
 }
 
+.imagens-animada{
+    transition: transform 0.2s ease;
+}
+
+.imagens-animada:hover{
+    transform: scale(1.05);
+}
+
 ul{
     list-style: none;
     margin-right: 10rem;
