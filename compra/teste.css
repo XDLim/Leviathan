@@ -144,41 +144,120 @@ a{
     color: white;
     outline: 0;
 }
-
-.conteudo_carrinho{
-  display: flex;
-  justify-content: center;
-  background-color: rgb(53, 50, 50);
-  margin-left: 5rem;
-  margin-right: 5rem;
-  padding: 4rem;
-  margin-top: 10rem;
-  border-radius: 10px;
-  gap: 30px;
-  color: #fff;
-  font-family: Rubik;
-}
-
-.sem_imagem{
-  width: 10rem;
-}
-
-.primeira_parte p{
-  font-size: large;
-  font-weight: 450;
-}
-
-.lancamento{
-  margin-top: 20px;
-}
-
-.compra{
-  display: flex;
-  justify-content: flex-start;
-}
-
-.resumo{
-  font-size: x-large;
-  font-weight: 450;
-  margin-bottom: 20px;
-}
+  /* Container geral do carrinho */
+  .carrinho {
+    padding: 20px;
+  }
+  
+  /* Título */
+  .titulo h1 {
+    font-size: 2rem;
+    color: #61a5ff; /* azul */
+    margin-bottom: 20px;
+  }
+  
+  /* Container principal (lado esquerdo e direito) */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #111; /* preto um pouco mais claro */
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  /* Parte do produto */
+  .produto {
+    display: flex;
+    gap: 20px;
+    flex: 2; /* ocupa mais espaço que o resumo */
+  }
+  
+  /* Imagem do jogo */
+  .imagem-jogo img {
+    width: 150px;
+    border-radius: 10px;
+  }
+  
+  /* Detalhes do jogo */
+  .detalhes h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .detalhes .preco {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #f2f2f2;
+  }
+  
+  .detalhes .lancamento {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #bbb;
+  }
+  
+  /* Classificação indicativa */
+  .classificacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .classificacao .idade {
+    background-color: #000;
+    border: 2px solid #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .classificacao p {
+    font-size: 0.85rem;
+    color: #87a7ff;
+    line-height: 1.4;
+  }
+  
+  /* Resumo da compra */
+  .resumo {
+    flex: 1;
+    padding: 15px;
+    border-left: 1px solid #444;
+  }
+  
+  .resumo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .resumo p {
+    margin-bottom: 10px;
+  }
+  
+  .resumo .subtotal {
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  /* Botão de comprar */
+  .resumo button {
+    background-color: #61a5ff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .resumo button:hover {
+    background-color: #3d7edb;
+  }
