@@ -21,14 +21,15 @@
 }
 
 body{
-    background-color: var(--cor-fundo);
+  height: 100vh;
+    background: linear-gradient(180deg, black, black, #2f4152, #80B1DF);
     font-family: var(--fonte-principal);
-    color: var(--cor-letra);
+    color: white;
     align-items: center;
 }
 
 .header {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para ver o vídeo */
+    background-color: transparent; /* Fundo semi-transparente para ver o vídeo */
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -143,21 +144,107 @@ a{
     margin-top: 2rem;
 }
 
+
 .linha-animada{
-    margin-top: 3rem;
-    width: 0;
-    height: 5px;
-    background-color: white;
-    animation: linhanova 2s forwards;
+  display: flex;
 }
 
-@keyframes linhanova{
-    from{
-        width: 0;
-        opacity: 0;
-    }
-    to{
-        width: 100%;
-        opacity: 1;
-    }
+.star-symbol{
+  font-size: 50px;
+  color: var(--cor-letra);
+  animation: clareando 2s ;
+}
+
+@keyframes clareando{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+
+.left-line{
+  margin-left: 25rem;
+  margin-right: 5px;
+  margin-top: 33px;
+  margin-bottom: 42px;
+  width: 30%;
+  border: 1px solid var(--cor-letra);
+  background-color: var(--cor-letra);
+  animation: left-line 1.5s forwards;
+}
+
+@keyframes left-line{
+  from{
+    width: 81%;
+    margin-left: 10px;
+    opacity: 0.2;
+  }
+
+  to{
+    width: 30%;
+    margin-left: 35rem;
+    opacity: 1;
+  }
+}
+
+
+.right-line{
+  margin-right: 25rem;
+  margin-left: 5px;
+  margin-top: 33px;
+  margin-bottom: 42px;
+  width: 30%;
+  border: 1px solid var(--cor-letra);
+  background-color: var(--cor-letra);
+  animation: right-line 1.5s forwards;
+}
+
+@keyframes right-line{
+  from{
+    width: 81%;
+    margin-right: 10px;
+    opacity: 0.2;
+  }
+
+  to{
+    width: 30%;
+    margin-right: 35rem;
+    opacity: 1;
+  }
+
+}
+
+.escrita-sobre{
+  margin-top: 5rem;
+  animation: escrita 3s forwards;
+}
+
+
+@keyframes escrita{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+.sugestao{
+  padding: 8px;
+  background-color: var(--cor-letra);
+  border: 0;
+  transition: transform 0.3s ease;
+}
+
+.sugestao:hover{
+  transform: scale(1.1);
+}
+
+.sugestao a{
+  color: white
 }
