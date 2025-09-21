@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+
+    --cor-fundo: #000000;
+    --cor-letra: #80B1DF;
+    --fonte-principal: Roboto;
+    --cor-footer: #232426;
+    --barra-pesquisa: #2B2B2B;
+    --destaque: #211F1F;
+    --cor-botao: #007AFF;
+    --preco-antes: #B2A0A0;
+    --descricao-footer: #7C6E6E;
+    --cor-botao-cadastrar: #007bff
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  height: 100vh;
+    background: linear-gradient(180deg, black, black, #2f4152, #80B1DF);
+    font-family: var(--fonte-principal);
+    color: white;
+    align-items: center;
+}
+
+.header {
+    background-color: transparent; /* Fundo semi-transparente para ver o vídeo */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para garantir que fique acima do overlay */
+    z-index: 2; /* Acima da overlay do vídeo */
+  }
+  
+  .header-left,
+  .header-center,
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-site {
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
+  }
+  
+  .main-nav a,
+  .secondary-nav a {
+    margin-right: 25px;
+    font-weight: 500;
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+  
+  .main-nav a:hover,
+  .secondary-nav a:hover {
+    color: #fff;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 15px;
+  }
+  
+  .search-bar input {
+    border: none;
+    background: transparent;
+    color: #f0f0f0;
+    outline: none;
+    padding: 5px;
+    width: 180px;
+  }
+  
+  .search-bar button {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0 5px;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+  }
+  
+  .btn-auth {
+    padding: 8px 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: #f0f0f0;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .btn-auth:hover {
+    background-color: #333;
+    border-color: #666;
+  }
+  
+  .btn-auth-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-auth-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+.barra_pesquisa{
+    background-color: var(--barra-pesquisa);
+    padding: 15px 15px;
+    align-items: center;
+    border-radius: 100px;
+    margin: 3rem;
+    margin-left: 10rem;
+    width: 200px;
+    height: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container-animado{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+.linha-animada{
+  display: flex;
+}
+
+.star-symbol{
+  font-size: 50px;
+  color: var(--cor-letra);
+  animation: clareando 2s ;
+}
+
+@keyframes clareando{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+
+.left-line{
+  margin-left: 25rem;
+  margin-right: 5px;
+  margin-top: 33px;
+  margin-bottom: 42px;
+  width: 30%;
+  border: 1px solid var(--cor-letra);
+  background-color: var(--cor-letra);
+  animation: left-line 1.5s forwards;
+}
+
+@keyframes left-line{
+  from{
+    width: 81%;
+    margin-left: 10px;
+    opacity: 0.2;
+  }
+
+  to{
+    width: 30%;
+    margin-left: 35rem;
+    opacity: 1;
+  }
+}
+
+
+.right-line{
+  margin-right: 25rem;
+  margin-left: 5px;
+  margin-top: 33px;
+  margin-bottom: 42px;
+  width: 30%;
+  border: 1px solid var(--cor-letra);
+  background-color: var(--cor-letra);
+  animation: right-line 1.5s forwards;
+}
+
+@keyframes right-line{
+  from{
+    width: 81%;
+    margin-right: 10px;
+    opacity: 0.2;
+  }
+
+  to{
+    width: 30%;
+    margin-right: 35rem;
+    opacity: 1;
+  }
+
+}
+
+.escrita-sobre{
+  margin-top: 5rem;
+  animation: escrita 3s forwards;
+}
+
+
+@keyframes escrita{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+.sugestao{
+  padding: 8px;
+  background-color: var(--cor-letra);
+  border: 0;
+  transition: transform 0.3s ease;
+}
+
+.sugestao:hover{
+  transform: scale(1.1);
+}
+
+.sugestao a{
+  color: white
+}
