@@ -254,3 +254,69 @@ a{
 .sugestao a:hover{
   color: black;
 }
+
+.mission-valuer{
+  display: flex;
+  text-align: center;
+  margin: 5rem;
+}
+
+.line-division{
+  margin-left: 16rem;
+  margin-right: 5rem;
+  animation: line-division 3s forwards;
+  width: 2px;
+  background-color: white;
+}
+
+@keyframes line-division{
+  from{
+    opacity: 0.2;
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+  }
+
+  to{
+    opacity: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.title-valuer,
+.title-mission{
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+  color: var(--cor-letra);
+  animation: escrita 3s forwards;
+}
+
+li{
+  margin-bottom: 1.5rem;
+  animation: escrita 3s forwards;
+}
+
+.valuer-descrition{
+  list-style: none;
+}
+
+.redes-sociais{
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.midias{
+  padding: 5rem;
+}
+
+.midias button{
+  margin-left: 5rem;
+  margin-right: 5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.zap{
+  position: relative;
+  top: 20px;
+}
