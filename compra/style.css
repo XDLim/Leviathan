@@ -159,6 +159,10 @@ a{
   font-family: Rubik;
 }
 
+.primeira_parte{
+  display: block;
+}
+
 .sem_imagem{
   width: 10rem;
 }
