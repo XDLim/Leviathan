@@ -235,16 +235,22 @@ a{
 }
 
 .sugestao{
-  padding: 8px;
-  background-color: var(--cor-letra);
+  padding: 10px;
+  background-color: black;
   border: 0;
   transition: transform 0.3s ease;
+  border-radius: 15px;
 }
 
 .sugestao:hover{
   transform: scale(1.1);
+  background-color: var(--cor-letra);
 }
 
 .sugestao a{
-  color: white
+  color: white;
+}
+
+.sugestao a:hover{
+  color: black;
 }
