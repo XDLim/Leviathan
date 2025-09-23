@@ -63,6 +63,12 @@ body{
   .secondary-nav a:hover {
     color: #fff;
   }
+
+  .daimond{
+    font-size: 20px;
+    position: relative;
+    right: 15px;
+  }
   
   .search-bar {
     display: flex;
