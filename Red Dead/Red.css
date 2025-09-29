@@ -94,80 +94,84 @@ a:hover {
 /* --- Header (Cabeçalho) --- */
 
 .header {
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Fundo semi-transparente para ver o vídeo */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para ver o vídeo */
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative;
-    /* Para garantir que fique acima do overlay */
-    z-index: 2;
-    /* Acima da overlay do vídeo */
-}
-
-.header-left,
-.header-center,
-.header-right {
+    position: relative; /* Para garantir que fique acima do overlay */
+    z-index: 2; /* Acima da overlay do vídeo */
+  }
+  
+  .header-left,
+  .header-center,
+  .header-right {
     display: flex;
     align-items: center;
-}
-
-.site-logo {
+  }
+  
+  .logo-site {
     height: 40px;
     width: auto;
     margin-right: 20px;
-}
-
-.main-nav a,
-.secondary-nav a {
+  }
+  
+  .main-nav a,
+  .secondary-nav a {
     margin-right: 25px;
     font-weight: 500;
     color: #ccc;
     transition: color 0.3s ease;
-}
-
-.main-nav a:hover,
-.secondary-nav a:hover {
+  }
+  
+  .main-nav a:hover,
+  .secondary-nav a:hover {
     color: #fff;
-}
+  }
 
-.search-bar {
+  .daimond{
+    font-size: 20px;
+    position: relative;
+    right: 15px;
+    color: red;
+  }
+  
+  .search-bar {
     display: flex;
     align-items: center;
     background-color: #2b2b2b;
     border-radius: 20px;
     padding: 5px 15px;
     margin-right: 15px;
-}
-
-.search-bar input {
+  }
+  
+  .search-bar input {
     border: none;
     background: transparent;
     color: #f0f0f0;
     outline: none;
     padding: 5px;
     width: 180px;
-}
-
-.search-bar button {
+  }
+  
+  .search-bar button {
     background: transparent;
     border: none;
     color: #ccc;
     cursor: pointer;
     font-size: 1em;
     padding: 0 5px;
-}
-
-.auth-buttons {
+  }
+  
+  .auth-buttons {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-left: 15px;
-}
-
-.btn-auth {
+  }
+  
+  .btn-auth {
     padding: 8px 15px;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -175,21 +179,43 @@ a:hover {
     font-size: 0.9em;
     font-weight: 500;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.btn-auth:hover {
+  }
+  
+  .btn-auth:hover {
     background-color: #333;
     border-color: #666;
-}
-
-.btn-auth-primary {
+  }
+  
+  .btn-auth-primary {
     background-color: #007bff;
     border-color: #007bff;
-}
-
-.btn-auth-primary:hover {
+  }
+  
+  .btn-auth-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
+  }
+
+.barra_pesquisa{
+    background-color: var(--barra-pesquisa);
+    padding: 15px 15px;
+    align-items: center;
+    border-radius: 100px;
+    margin: 3rem;
+    margin-left: 10rem;
+    width: 200px;
+    height: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.escrita_pesquisa{
+    background: transparent;
+    border: transparent;
+    color: white;
+    outline: 0  ;
 }
 
 
