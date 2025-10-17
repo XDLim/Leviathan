@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+    background: linear-gradient(#000000, #0056b3);
     color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -165,14 +165,14 @@ a{
 
 .botao-ordenacao {
     color: #ffffff;
-    background-color: #597997;
+    background-color: #182736;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .botao-ordenacao.ativo {
-    background-color: #80B1DF;
+    background-color: #0056b3;
 }
 
 .grid-jogos {
