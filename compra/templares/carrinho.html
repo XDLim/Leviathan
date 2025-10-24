@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Seu Carrinho</title>
+</head>
+<body>
+  <h1>🛒 Seu Carrinho</h1>
+
+  {% if carrinho %}
+    {% for item in carrinho %}
+      <div>
+        <img src="{{ item.imagem }}" width="100">
+        <span>{{ item.nome }}</span> - R$ {{ "%.2f"|format(item.preco) }}
+      </div>
+    {% endfor %}
+    <h3>Total: R$ {{ "%.2f"|format(total) }}</h3>
+    <a href="{{ url_for('limpar') }}">Limpar carrinho</a>
+  {% else %}
+    <p>O carrinho está vazio 😢</p>
+  {% endif %}
+
+  <a href="{{ url_for('index') }}">Voltar à loja</a>
+</body>
+</html>
