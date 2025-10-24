@@ -631,26 +631,26 @@ li{
     color: #007bff;
   }
   
+  @media (max-width: 1200px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .header-right,
+    .header-center{
+        margin-top: 1rem;
+    }
   
-  @media (max-width: 768px) {
-    .card-container {
-        padding: 30px 20px;
+    .menu {
+      margin-top: 1rem;
     }
-    .card-title {
-        font-size: 1.5em;
-    }
-    .card-subtitle {
-        font-size: 0.9em;
-    }
-    .form-toggle {
-        font-size: 0.9em;
-    }
-    .input-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .social-login {
-        flex-direction: column;
+  
+    .conteudo {
+      flex-direction: column;
+      align-items: center;
     }
   }
-  
+
+
+ 
