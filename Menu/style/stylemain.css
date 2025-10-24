@@ -352,8 +352,8 @@ a{
 
 .parte_destaque{
     padding: 4rem;
-    margin-right: 14rem;
-    margin-left: 14rem;
+    margin-right: 12%;
+    margin-left: 12%;
     margin-top: 4rem;
     background-color: var(--destaque);
     border-radius: 50px;
@@ -380,19 +380,22 @@ a{
 .jogos_destaques{
     display: flex;
     justify-content: space-between;
-    margin-right: 8rem;
+    margin-right: -0.02%;
     margin-top: 2.5rem;
 }
 
-.valorant{
-    margin-left: 2rem;
-    margin-right: 2rem;
+.imagem_nba,    
+.imagem_valorant,
+.imagem_gta{
+    width: 95%;
+    height: 65%;
 }
 
-.imagem_gta{
-    width: 420px;
-    height: 226px;
+.valorant{
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
+
 
 .botao_vermais{
     border-radius: 115px;
@@ -415,6 +418,7 @@ a{
     color: white;
     background-color: #80B1DF;
     margin-top: 0;
+    width: 95%;
 }
 
 .embreve{
@@ -422,9 +426,8 @@ a{
     color: white;
     background-color: black;
     margin-top: 0;
+    width: 95%;
 }
-
-
 
 .nome_gta,
 .nome_vava,
@@ -631,26 +634,54 @@ li{
     color: #007bff;
   }
   
+  @media (max-width: 1300px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .header-right,
+    .header-center{
+        margin-top: 1rem;
+    }
   
-  @media (max-width: 768px) {
-    .card-container {
-        padding: 30px 20px;
+    .header-right {
+        display: none;
     }
-    .card-title {
-        font-size: 1.5em;
-    }
-    .card-subtitle {
-        font-size: 0.9em;
-    }
-    .form-toggle {
-        font-size: 0.9em;
-    }
-    .input-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .social-login {
-        flex-direction: column;
-    }
-  }
   
+    .jogo_principal,
+    .video_jogo_principal{
+        display: none;
+    }
+
+    .jogos_ao_lado{
+        display: flex;
+        text-align: center;
+        margin-left: -5rem;
+    }
+
+    .nossos_principais{
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+
+    .jogos_principais{
+        margin-left: 8rem;
+    }
+
+    
+    .red_dead,
+    .fifa{
+        display: none;
+    }
+
+    .parte_destaque{
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+
+    .preco_destaque{
+        display: none;
+    }
+
+}
