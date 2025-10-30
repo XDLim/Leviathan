@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leviathan - Descobrir</title>
+    <link rel="icon" href="./imagen/logo.png">
+    <link rel="stylesheet" href="../static/css/ddes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <!--Divisão da esquerda-->
+        <div class="header-left">
+            <a href="../index.html" class="logo-link">
+                <img src="./imagen/logo.png" alt="Logo do Site" class="logo-site">
+            </a>
+            <nav class="main-nav">
+                <a href="#" class="suporte-nav">Suporte</a>
+            </nav>
+        </div>
+        
+        <!--Dvisão central-->
+        <div class="header-center">
+            <nav class="secondary-nav">
+                <a href="../Descobrir/index.html">Descobrir</a>
+                <a href="#">Navegar</a>
+                <a href="#">Novidades</a>
+            </nav>
+        </div>
+
+        <!--Divisão da direita-->
+        <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar loja">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="auth-buttons">
+                <a href="../templates/Entrar.html" class="btn-auth">Entrar</a>
+                <a href="../templates/c" class="btn-auth btn-auth-primary">Cadastrar</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="container-conteudo">
+            <div class="corpo-principal">
+                <div class="barra-filtro-ordenacao">
+                    <div class="opcoes-ordenacao">
+                        <span>Classificar Por:</span>
+                        <a href="#" class="botao-ordenacao ativo">Mais Jogados</a>
+                        <a href="#" class="botao-ordenacao">Novos Jogos</a>
+                        <a href="#" class="botao-ordenacao">A - Z</a>
+                    </div>
+                </div>
+                <div class="grid-jogos">
+                    <div class="card-jogo">
+                        <a href="../Skull/skul.html">
+                            <img src="./imagen/RotTR_boxart 1.png" alt="Rise of the Tomb Raider">
+                        </a>
+                    </div>
+                    <div class="card-jogo">
+                    <a href="../../Elden Ring/Elder.html">
+                        <img src="./imagen/28506-peak-pc-capa-1 1.png" alt="Peak">
+                    </a>
+                    </div>
+                    <div class="card-jogo">
+                        <img src="./imagen/s-l1200.png" alt="Roblox">
+                    </div>
+                    <div class="card-jogo">
+                        <img src="./imagen/marvel-rivals-wq3mr 1.png" alt="Marvel Rivals">
+                    </div>
+                    <div class="card-jogo">
+                        <img src="./imagen/Hollow_Knight_first_cover_art.webp 1.png" alt="Hollow Knight">
+                    </div>
+                    <div class="card-jogo">
+                        <img src="./imagen/94C44E50-1ECD-4A3F-A74D-2477218B3939 1.png" alt="Undertale">
+                    </div>
+                    <div class="card-jogo">
+                        <img src="./imagen/71C1sCQwi5L._UF1000,1000_QL80_ 1.png" alt="Resident Evil 4 Remake">
+                    </div>
+                    <div class="card-jogo">
+                        <img src="./imagen/LIS_True_Colors_capa 1.png" alt="Life is Strange: True Colors">
+                    </div>
+                    <div class="card-jogo">
+                        <img src="./imagen/Horizon_Zero_Dawn_capa 1.png" alt="Horizon Zero Dawn">
+                    </div>
+                </div>
+            </div>
+                <div class="container-filtros">
+                    <div class="grupo-filtro">
+                        <p class="titulo-filtro">Filtros:</p>
+                        <p class="subtitulo-filtro">gêneros</p>
+                        <label class="opcao-filtro"><input type="radio" name="genero"> Ação e Aventura</label>
+                        <label class="opcao-filtro"><input type="radio" name="genero"> Esportes</label>
+                        <label class="opcao-filtro"><input type="radio" name="genero"> Terror</label>
+                        <label class="opcao-filtro"><input type="radio" name="genero"> Suspense</label>
+                    </div>
+                    <div class="grupo-filtro">
+                        <p class="subtitulo-filtro">Valor</p>
+                        <div class="barra-intervalo-preco">
+                            <span id="valor-preco">R$ 0</span>
+                            <input type="range" min="0" max="999" value="0" class="barra-deslizante" id="slider-preco">
+                            <span>R$ 999</span>
+                        </div>
+                    </div>
+                    <div class="grupo-filtro">
+                        <p class="subtitulo-filtro">Linguagem</p>
+                        <label class="opcao-filtro"><input type="radio" name="linguagem"> português</label>
+                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Abcazio</label>
+                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Japonês</label>
+                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Chinês</label>
+                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Inglês</label>
+                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Russo</label>
+                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Espanhol</label>
+                        <button class="botao-mais-idiomas">Buscar Mais Idiomas</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="colunas-rodape">
+            <div class="coluna-rodape">
+                <h4>Sobre Nós</h4>
+                <ul>
+                    <li><a href="#">Informações</a></li>
+                    <li><a href="#">Contatos</a></li>
+                </ul>
+            </div>
+            <div class="coluna-rodape">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="coluna-rodape">
+                <h4>Início</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="coluna-rodape coluna-info-rodape">
+                <h4>Informações</h4>
+                <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade, segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.</p>
+            </div>
+        </div>
+        <div class="midia-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="../static/js/ddes.js"></script>
+
+</body>
+</html>
