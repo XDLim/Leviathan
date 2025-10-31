@@ -25,6 +25,7 @@ body{
     font-family: var(--fonte-principal);
     color: var(--cor-letra);
     align-items: center;
+    overflow-x: hidden;
 }
 
 .header {
