@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
+    <!--Parte principal que monta o codigo-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leviathan - Descobrir</title>
-    <link rel="icon" href="./imagen/logo.png">
-    <link rel="stylesheet" href="../static/css/stylemain.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
 
+    <!--Titulo da pagina-->
+    <title>Leviathan</title>
+
+    <!--Icone que fica ao lado do nome da pagina-->
+    <link rel="icon" href="../static/imagens/menu/logo.png">
+
+    <!--link com o stylemain.css para o CSS do site-->
+    <link rel="stylesheet" href="../static/css/stylemain.css">
+
+</head>
+
+
+<body>
+    <!--Header com todos os codigos do site-->
     <header class="header">
 
         <!--Divisão da esquerda-->
         <div class="header-left">
-            <a href="../Descobrir/index.html" class="logo-link">
-                <img src="./imagen/logo.png" alt="Logo do Site" class="logo-site">
+            <a href="#" class="logo-link">
+                <img src="../static/imagens/menu/logo.png" alt="Logo do Site" class="logo-site">
             </a>
             <nav class="main-nav">
-                <a href="#" class="suporte-nav">Suporte</a>
+                <a href="../templates/sobre.html" class="suporte-nav">Sobre</a>
             </nav>
         </div>
-        
+
         <!--Dvisão central-->
         <div class="header-center">
             <nav class="secondary-nav">
-                <a href="../Descobrir/index.html">Descobrir</a>
-                <a href="#">Navegar</a>
-                <a href="#">Novidades</a>
+                <a href="../templates/index.html">Descobrir</a>
+                <span class="daimond">&diams;</span>
+                <a href="#">Suporte</a>
             </nav>
         </div>
 
@@ -39,126 +49,300 @@
             </div>
             <div class="auth-buttons">
                 <a href="../templates/Entrar.html" class="btn-auth">Entrar</a>
-                <a href="../templates/c" class="btn-auth btn-auth-primary">Cadastrar</a>
+                <a href="../templates/Entrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
             </div>
         </div>
-        
+
     </header>
 
-    <main class="conteudo-principal">
-        <div class="container-conteudo">
-            <div class="corpo-principal">
-                <div class="barra-filtro-ordenacao">
-                    <div class="opcoes-ordenacao">
-                        <span>Classificar Por:</span>
-                        <a href="#" class="botao-ordenacao ativo">Mais Jogados</a>
-                        <a href="#" class="botao-ordenacao">Novos Jogos</a>
-                        <a href="#" class="botao-ordenacao">A - Z</a>
-                    </div>
+    <!--Container de jogos principais e lista de jogos-->
+    <section class="jogos">
+
+        <!--Divisão do jogo em destaque aberto-->
+        <div class="jogo_principal">
+            <a href="../templates/skul.html"><img src="../static/imagens/menu/Nome do jogo Skul.png" alt="nome.png" width="300px" class="nome_jogo_skul"></a>
+
+            <p class="texto_skul">Aproveite e economize com nossas <br>promoções</p>
+
+            <p class="texto_skul2">Tente uns dos nossos sucessos!</p>
+
+            <button class="botao_economizar"><a class="link_economizar" href="../templates/skul.html">Economize agora</a></button>
+
+            <button class="botao_desejos"><a class="link_desejos" href="#">Lista de desejos</a></button>
+        </div>
+
+        <!--Video do jogo em destaque aberto-->
+        <div class="video_jogo_principal">
+            <video autoplay muted loop id="Video trailer - Skul the Hero Slayer" width="800px">
+                <source src="../static/imagens/menu/Video trailer - Skul the Hero Slayer.mp4">
+            </video>
+
+        </div>
+
+        <!--Lista de jogos do ao lado do jogo em destaque aberto-->
+        <div class="jogos_ao_lado">
+
+            <!--Jogo Skul: The Hero Slayer-->
+            <div class="skul">
+                <a href="../templates/skul.html">
+                    <img src="../static/imagens/menu/Skul.png" alt="skul.png" width="110px">
+                </a>
+                <a class="nome_skul" href="../Skull/skul.html">Skul: The Hero Slayer</a>
+            </div>
+
+            <!--Jogo Spider-man-->
+            <div class="spider-man">
+                <a href="../templates/Spider.html">
+                    <img src="../static/imagens/menu/Spider Man.png" alt="spider.png" width="110px">
+                </a>
+                <a class="nome_spider" href="../templates/Spider.html">Marvel's Spider-Man</a>
+            </div>
+
+            <!--Jogo Elden Ring-->
+            <div class="elden">
+                <a href="../templates/Elder.html">
+                    <img src="../static/imagens/menu/Elden Ring.jpg" alt="elden ring.png" width="110px">
+                </a>
+                <a class="nome_elden" href="../templates/Elder.html">ELDEN RING</a>
+            </div>
+
+            <!--Jogo Batman Arkhan Knight-->
+            <div class="batman">
+                <a href="../templates/batman.html">
+                    <img src="../static/imagens/menu/Batman_Arkham_Knight_Capa.jpg" alt="roblox.png" width="100px">
+                </a>
+                <a class="nome_roblox" href="../templates/batman.html">Batman Arkhan Night   </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--parte dos jogos principais que liga a loja geral-->
+    <div class="nossos_principais">
+        <p>Nossos Principais Jogos</p>
+
+        <a class="vermais_principais" href="#">Ver mais</a>
+    </div>
+
+    <!--Jogos principais-->
+    <section class="jogos_principais">
+
+        <!--jogo god of war-->
+        <div class="god_of_war">
+            <a href="../templates/God.html">
+                <img src="../static/imagens/menu/God of War.png" alt="god of war.png" width="200px">
+            </a>
+
+            <a class="nome_do_jogo" href="../templates/Fortnite.html"><br>God Of War <br>Ragnarok</a>
+            <p class="preco">R$ 199,92</p>
+        </div>
+
+        <!--jogo fortnite-->
+        <div class="fortnite">
+            <a href="../templates/Fortnite.html">
+                <img src="../static/imagens/menu/Fortnite.png" alt="fortnite.png" width="180px">
+            </a>
+            <a class="nome_do_jogo" href="../templates/Fortnite.html"><br>Fortnite</a>
+            <p class="preco">Gratis</p>
+        </div>
+
+        <!--Jogo Rocket League-->
+        <div class="rocket_league">
+            <a href="../templates/Rocket.html">
+                <img src="../static/imagens/menu/Rocket League.png" alt="rocket league.png" width="200px">
+            </a>
+            <a class="nome_do_jogo" href="../templates/Rocket.html"><br>Rocket <br>League</a>
+            <p class="preco">Gratis</p>
+        </div>
+
+        <!--Jogo Red Dead Redemption\-->
+        <div class="red_dead">
+            <a href="../templates/Red.html">
+                <img src="../static/imagens/menu/Red Dead Redemption 2.png" alt="red dead redemption 2.png" width="200px">
+            </a>
+            <a class="nome_do_jogo" href="../templates/Red.html"><br>Red Dead <br>Redemption <br>2</a>
+            <p class="preco">R$ 220,00</p>
+        </div>
+
+        <!--Jogo Fifa-->
+        <div class="fifa">
+            <a href="../FC25/FC25.html">
+                <img src="../static/imagens/menu/FIFA 2025.png" alt="fifa 2025.png" width="200px">
+            </a>
+            <a class="nome_do_jogo" href="../FC25/FC25.html"><br>Edição <br>Standard do <br>EA SPORTS FC™ 25</a>
+            <p class="preco">R$ 89,70</p>
+        </div>
+
+    </section>
+
+
+
+    <!--parte dos destaques-->
+    <section class="parte_destaque">
+
+        <!--parte dos destaques-->
+        <div class="destaques">
+
+            <!--Parte do titulo e do botao ver mais-->
+            <div class="estrela">
+                <svg class="icone_estrela" width="65" height="65" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5 12 2" />
+                </svg>
+
+                <p class="titulo_destaque">Destaques</p>
+            </div>
+
+            <button class="botao_vermais"><a class="botao_vermais" href="#">Ver mais</a></button>
+        </div>
+
+        <!--Jogos nos destaques-->
+        <div class="jogos_destaques">
+
+            <!--Jogo NBA-->
+            <div class="nba_2k25">
+                <a href="../NBA2k25/nba.html">
+                    <img src="./imagem/NBA 2K25.jpg" alt="nba 2k25.png" width="400px" class="imagem_nba">
+                </a>
+
+                <p class="disponivel_embreve">Disponivel</p>
+
+                <div class="nome_nba">
+                    <a class="nome_jogos" href="../NBA2k25/nba.html">NBA 2k25</a>
                 </div>
-                <div class="grid-jogos">
-                    <div class="card-jogo">
-                        <a href="../Skull/skul.html">
-                            <img src="./imagen/RotTR_boxart 1.png" alt="Rise of the Tomb Raider">
-                        </a>
-                    </div>
-                    <div class="card-jogo">
-                    <a href="../../Elden Ring/Elder.html">
-                        <img src="./imagen/28506-peak-pc-capa-1 1.png" alt="Peak">
-                    </a>
-                    </div>
-                    <div class="card-jogo">
-                        <img src="./imagen/s-l1200.png" alt="Roblox">
-                    </div>
-                    <div class="card-jogo">
-                        <img src="./imagen/marvel-rivals-wq3mr 1.png" alt="Marvel Rivals">
-                    </div>
-                    <div class="card-jogo">
-                        <img src="./imagen/Hollow_Knight_first_cover_art.webp 1.png" alt="Hollow Knight">
-                    </div>
-                    <div class="card-jogo">
-                        <img src="./imagen/94C44E50-1ECD-4A3F-A74D-2477218B3939 1.png" alt="Undertale">
-                    </div>
-                    <div class="card-jogo">
-                        <img src="./imagen/71C1sCQwi5L._UF1000,1000_QL80_ 1.png" alt="Resident Evil 4 Remake">
-                    </div>
-                    <div class="card-jogo">
-                        <img src="./imagen/LIS_True_Colors_capa 1.png" alt="Life is Strange: True Colors">
-                    </div>
-                    <div class="card-jogo">
-                        <img src="./imagen/Horizon_Zero_Dawn_capa 1.png" alt="Horizon Zero Dawn">
-                    </div>
+
+                <div class="preco_destaque">
+                    <p class="porcento">-70%</p>
+                    <p class="preco_antes">R$ 300,19*</p>
+                    <p class="preco_agr">R$ 150,00</p>
+                    <p class="data">18 de Nov As 12:00</p>
                 </div>
             </div>
-                <div class="container-filtros">
-                    <div class="grupo-filtro">
-                        <p class="titulo-filtro">Filtros:</p>
-                        <p class="subtitulo-filtro">gêneros</p>
-                        <label class="opcao-filtro"><input type="radio" name="genero"> Ação e Aventura</label>
-                        <label class="opcao-filtro"><input type="radio" name="genero"> Esportes</label>
-                        <label class="opcao-filtro"><input type="radio" name="genero"> Terror</label>
-                        <label class="opcao-filtro"><input type="radio" name="genero"> Suspense</label>
-                    </div>
-                    <div class="grupo-filtro">
-                        <p class="subtitulo-filtro">Valor</p>
-                        <div class="barra-intervalo-preco">
-                            <span id="valor-preco">R$ 0</span>
-                            <input type="range" min="0" max="999" value="0" class="barra-deslizante" id="slider-preco">
-                            <span>R$ 999</span>
-                        </div>
-                    </div>
-                    <div class="grupo-filtro">
-                        <p class="subtitulo-filtro">Linguagem</p>
-                        <label class="opcao-filtro"><input type="radio" name="linguagem"> português</label>
-                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Abcazio</label>
-                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Japonês</label>
-                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Chinês</label>
-                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Inglês</label>
-                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Russo</label>
-                        <label class="opcao-filtro"><input type="radio" name="linguagem"> Espanhol</label>
-                        <button class="botao-mais-idiomas">Buscar Mais Idiomas</button>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </main>
 
-    <footer class="rodape">
-        <div class="colunas-rodape">
-            <div class="coluna-rodape">
+            <!--Jogo Valorant-->
+            <div class="valorant">
+                <a href="#">
+                    <img src="./imagem/valorant.webp" alt="valorant.png" width="400px" class="imagem_death">
+                </a>
+
+                <p class="disponivel_embreve">Disponivel</p>
+
+                <div class="nome_vava">
+                    <a class="nome_jogos" href="#">Valorant</a>
+                </div>
+
+                <div class="preco_destaque">
+                    <p class="preco_agr">Gratis</p>
+                </div>
+            </div>
+
+            <!--Jogo Two Point Hospital-->
+            <div class="gta6">
+                <a href="#">
+                    <img src="./imagem/gta 6.webp" alt="two point hospital.png" class="imagem_gta">
+                </a>
+
+                <p class="embreve">Em Breve</p>
+
+
+                <div class="nome_gta">
+                    <a class="nome_jogos" href="#">Grand Theft Auto 6</a>
+                </div>
+
+                <div class="preco_destaque">
+                    <p class="preco_agr">Gratis</p>
+                    <p class="data">- 2026</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!--parte das novidades-->
+    <section class="container_novidade">
+        <h2 class="novidades">Novidades</h2>
+
+        <!--Conteudos novos!-->
+        <div class="conteudo_novidade">
+
+            <!--Novidade 1-->
+            <div class="snopdog">
+                <<<<<<< HEAD <a href="../Fortnite/Fortnite.html"> <img src="./imagem/SnopDog.png" alt="Fortnite.png" width="420px"></a>
+                    =======
+                    <a href="../Fortnite/Fortnite.html"> <img src="./imagem/SnopDog.png" alt="Fortnite.png" width="420px" class="imagens-animada"></a>
+                    >>>>>>> a49e5184c9db87d611fc4db853ada8d84b559f67
+
+                    <h2>Fortnite</h2>
+
+                    <p>De Long Beach para o mundo. É hora <br>de soltar os cachorros com o ícone <br>Musical Snoop Dogg!</p>
+            </div>
+
+            <!--novidade 2-->
+            <div class="jogo_novos">
+                <<<<<<< HEAD <a href=""><img src="./imagem/novos jogos disponiveis.webp" alt="jogos novos.png" width="420px"></a>
+                    =======
+                    <a href=""><img src="./imagem/novos jogos disponiveis.webp" alt="jogos novos.png" width="420px" class="imagens-animada"></a>
+                    >>>>>>> a49e5184c9db87d611fc4db853ada8d84b559f67
+
+                    <a href="">Confira proximos lançamentos</a>
+
+                    <p>Aqui você vera jogos que vão ser lançados em <br>breve. Fique por dentro de todos eles aqui.</p>
+            </div>
+
+            <!--novidade 3-->
+            <div class="jogos_promocao">
+                <<<<<<< HEAD <a href=""><img src="./imagem/jogos na promoção.webp" alt="jogos da promoção.png" width="420px"></a>
+                    =======
+                    <a href=""><img src="./imagem/jogos na promoção.webp" alt="jogos da promoção.png" width="420px" class="imagens-animada"></a>
+                    >>>>>>> a49e5184c9db87d611fc4db853ada8d84b559f67
+
+                    <a href="">Promoções</a>
+
+                    <p>Confira nossas promoções imperdiveis, <br>com preços unicos e exclusivos</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-col">
                 <h4>Sobre Nós</h4>
                 <ul>
                     <li><a href="#">Informações</a></li>
                     <li><a href="#">Contatos</a></li>
                 </ul>
             </div>
-            <div class="coluna-rodape">
+            <div class="footer-col">
                 <h4>Suporte</h4>
                 <ul>
                     <li><a href="#">Chat</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
-            <div class="coluna-rodape">
+            <div class="footer-col">
                 <h4>Início</h4>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Downloads</a></li>
                 </ul>
             </div>
-            <div class="coluna-rodape coluna-info-rodape">
+            <div class="footer-col footer-info">
                 <h4>Informações</h4>
                 <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade, segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.</p>
             </div>
         </div>
-        <div class="midia-social">
+        <div class="social-media">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
-    <script src="../static/js/ddes.js"></script>
-
 </body>
+
 </html>
