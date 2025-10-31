@@ -1,3 +1,61 @@
+<<<<<<< HEAD:Menu/Entrar e cadastrar/Entrar.css
+
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+
+
+body{
+    background: linear-gradient(to left, #0056b3, #eaeaeb);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+}
+
+
+.titulo_login{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(24, 121, 212);
+    position: relative;
+    left: 105px;
+    top: 200px;
+}
+
+
+
+.imglogin{
+    position: relative;
+    left: 128px;
+    top: 200px;
+}
+
+
+
+
+ .Login{
+    height: 600px;
+    padding: 4rem;
+    margin-right: 14rem;
+    margin-left:  14rem;
+    margin-top: 4rem;
+    background-color: #ffffffee;
+    border-radius: 50px;
+}
+
+
+
+.imagemjogo_login{
+    position: relative;
+    border-radius: 7px 40px 40px 7px;
+    bottom: 13.5rem;
+    left: 26rem;
+    width: 1000px;
+    height: 45.7rem;
+    
+    
+    
+=======
 /* Importação de uma fonte similar à da imagem */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -104,4 +162,5 @@ body {
 
 .links a:hover {
     color: #0056b3;
+>>>>>>> 53c9b4ce04870edf9522de3fc741b773f059df00:static/css/Entrar.css
 }
