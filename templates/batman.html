@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./imagem/icone batman.jpg">
+    <link rel="icon" href="/static/imagens/menu/logo.png">
     <title>Leviathan - Batman Arkhan Knight</title>
     <link rel="stylesheet" href="../static/css/batman.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,7 +12,7 @@
 
     <div class="video-background-container">
         <video autoplay muted loop id="background-video">
-            <source src="./imagem/video gameplay.mp4.webm.mp4" type="video/mp4"> 
+            <source src="../static/imagens/video gameplay.mp4.webm.mp4" type="video/mp4"> 
         </video>
         <div class="video-overlay"></div>
     </div>
@@ -24,7 +24,7 @@
         <!--Divisão da esquerda-->
         <div class="header-left">
             <a href="../Menu/Descobrir/index.html" class="logo-link">
-                <img src="./imagem/logo.png" alt="Logo do Site" class="logo-site">
+                <img src="/static/imagens/menu/logo.png" alt="Logo do Site" class="logo-site">
             </a>
             <nav class="main-nav">
             </nav>
@@ -78,15 +78,15 @@
                     <div id="overview-wrapper" class="tab-content active">
                         <div class="game-media-carousel">
                             <div class="main-media">
-                                <img src="./imagem/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Fortnite Main Image" id="mainGameImage">
+                                <img src="../static/imagens/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Fortnite Main Image" id="mainGameImage">
                             </div>
                             <div class="thumbnails">
                                 <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
                                 <div class="thumbnail-items">
-                                    <img src="./imagem/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Thumbnail Fortnite Raiz" class="thumbnail active" data-image="pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png">
-                                    <img src="./imagem/landscape_comp.jpeg" alt="Thumbnail Landscape Comp" class="thumbnail" data-image="landscape_comp.jpeg">
-                                    <img src="./imagem/landscape_comp (1).jpeg" alt="Thumbnail Landscape Comp 1" class="thumbnail" data-image="landscape_comp (1).jpeg">
-                                    <img src="./imagem/landscape_comp (2).jpeg" alt="Thumbnail Landscape Comp 2" class="thumbnail" data-image="landscape_comp (2).jpeg">
+                                    <img src="../static/imagens/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Thumbnail Fortnite Raiz" class="thumbnail active" data-image="pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png">
+                                    <img src="{{ url_for('static', filename='imagens/landscape_comp.jpeg') }}" alt="Thumbnail Landscape Comp" class="thumbnail" data-image="landscape_comp.jpeg">
+                                    <img src="../static/imagens/landscape_comp (1).jpeg" alt="Thumbnail Landscape Comp 1" class="thumbnail" data-image="landscape_comp (1).jpeg">
+                                    <img src="../static/imagens/landscape_comp (2).jpeg" alt="Thumbnail Landscape Comp 2" class="thumbnail" data-image="landscape_comp (2).jpeg">
                                 </div>
                                 <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
                             </div>
