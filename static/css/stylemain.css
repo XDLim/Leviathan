@@ -358,6 +358,7 @@ a{
     margin-top: 4rem;
     background-color: var(--destaque);
     border-radius: 50px;
+    overflow: hidden;
 }
 
 .estrela{
@@ -380,21 +381,28 @@ a{
 
 .jogos_destaques{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
     margin-right: -0.02%;
     margin-top: 2.5rem;
 }
 
-.imagem_nba,    
-.imagem_valorant,
-.imagem_gta{
-    width: 95%;
-    height: 65%;
+.imagem_nba{
+    width: 25rem;
+    height: auto;
 }
 
 .valorant{
+    width: 25rem;
+    height: auto;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.imagem_gta{
+    width: 25rem;
+    height: 14rem;
 }
 
 
@@ -419,7 +427,7 @@ a{
     color: white;
     background-color: #80B1DF;
     margin-top: 0;
-    width: 95%;
+    width: 100%;
 }
 
 .embreve{
@@ -427,7 +435,7 @@ a{
     color: white;
     background-color: black;
     margin-top: 0;
-    width: 95%;
+    width: 100%;
 }
 
 .nome_gta,
@@ -682,6 +690,10 @@ li{
     }
 
     .preco_destaque{
+        display: none;
+    }
+
+    .gta6{
         display: none;
     }
 
