@@ -391,6 +391,7 @@ a{
 .imagem_nba{
     width: 25rem;
     height: auto;
+    
 }
 
 .valorant{
@@ -657,7 +658,7 @@ li{
     .header-right {
         display: none;
     }
-  
+
     .jogo_principal,
     .video_jogo_principal{
         display: none;
@@ -665,13 +666,24 @@ li{
 
     .jogos_ao_lado{
         display: flex;
-        text-align: center;
-        margin-left: -5rem;
+        overflow-x: auto; 
+        scrollbar-width:thin; 
     }
+
+    .skul,
+    .spider-man,
+    .elden,
+    .batman {
+      flex: 0 0 auto;
+      text-align: center;
+      color: white;
+    }
+    
 
     .nossos_principais{
         margin-left: 8rem;
         margin-right: 8rem;
+        
     }
 
     .jogos_principais{
@@ -696,5 +708,10 @@ li{
     .gta6{
         display: none;
     }
-
+    
+    .snopdog,
+    .jogo_novos,
+    .jogos_promocao{
+        flex: 1 1 350px;
+    }
 }
