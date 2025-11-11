@@ -34,7 +34,8 @@ function validatePassword() {
     }
 }
 
-// Submit do formulário
+// Submit do formulário (IMPORTANTE: Seu link Entrar é um <a> e não submete o form. 
+// Para que o JS seja executado, você teria que alterar o <a> para um <button type="submit">)
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -48,11 +49,8 @@ form.addEventListener('submit', function(e) {
 
         console.log('Login:', { email, password, remember });
         
-        // Aqui você vai conectar com seu banco de dados
-        
-        
-        // Exemplo de redirecionamento após login
-        // window.location.href = 'dashboard.html';
+        // Se for para redirecionar após a validação, use:
+        // window.location.href = '../templates/index.html'; 
     }
 });
 
@@ -60,8 +58,8 @@ form.addEventListener('submit', function(e) {
 function loginWithGoogle() {
     console.log('Login com Google iniciado');
     
-    // Aqui você vai implementar o OAuth do Google
-    <script src="https://accounts.google.com/gsi/client" async></script>
+    // CORREÇÃO: Removida a tag <script> desnecessária aqui.
+    // O script do Google Sign-In deve estar no HTML, como você já fez na tag <script src="https://accounts.google.com/gsi/client" async></script>.
 }
 
 // Limpar erros ao digitar
@@ -83,7 +81,6 @@ passwordInput.addEventListener('input', function() {
 // ========== CARROSSEL DE VÍDEOS AJUSTADO (Apenas Autoplay) ==========
 let currentSlide = 0;
 const slides = document.querySelectorAll('.video-slide');
-// Indicadores removidos: const indicators = document.querySelectorAll('.indicator');
 const totalSlides = slides.length;
 
 // Tempo para trocar de slide automaticamente (em milissegundos)
@@ -106,7 +103,6 @@ function showSlide(index) {
 
     // Remover classe active de todos os slides
     slides.forEach(slide => slide.classList.remove('active'));
-    // Indicadores removidos: indicators.forEach(indicator => indicator.classList.remove('active'));
 
     // Garantir que o índice está dentro do range
     if (index >= totalSlides) {
@@ -119,7 +115,6 @@ function showSlide(index) {
 
     // Adicionar classe active no slide atual
     slides[currentSlide].classList.add('active');
-    // Indicadores removidos: indicators[currentSlide].classList.add('active');
 
     // Iniciar o novo vídeo
     const currentVideo = slides[currentSlide].querySelector('video');
@@ -127,8 +122,6 @@ function showSlide(index) {
         currentVideo.play();
     }
 }
-
-// REMOVIDO: changeSlide e goToSlide
 
 // Iniciar reprodução automática
 function startAutoPlay() {
@@ -141,8 +134,6 @@ function startAutoPlay() {
 function stopAutoPlay() {
     clearInterval(autoPlayTimer);
 }
-
-// REMOVIDO: Adicionar eventos de clique nos indicadores
 
 // Pausar autoplay quando passar o mouse sobre o carrossel
 const videoCarousel = document.querySelector('.video-carousel');

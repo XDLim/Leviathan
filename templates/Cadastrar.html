@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leviatha - Cadastrar</title>
-    <link rel="icon" type="image/png" href="../static/imagens/menu/logo.png">
+    <title>Entrar - Gaming Store</title>
     <link rel="stylesheet" href="../static/css/Entrar.css">
 </head>
 <body>
@@ -20,8 +19,8 @@
                     <span class="logo-text">Leviathan</span>
                 </div>
 
-                <h1>Cadastre-se Aqui</h1>
-                <p class="subtitle">Cadastre-se</p>
+                <h1>Bem-vindo de volta</h1>
+                <p class="subtitle">Entre na sua conta para continuar</p>
 
                 <form id="loginForm">
                     <div class="input-group">
@@ -42,12 +41,17 @@
                         <span class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</span>
                     </div>
 
+
+
                     <div class="remember-forgot">
-                        
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <span>Lembrar-me</span>
+                        </label>
                         
                     </div>
                     
-                    <a href="../templates/index.html"><button type="submit" class="btn-primary">Cadastrar</button></a>
+                    <a href="../templates/index.html" class="btn-primary">Entrar</a>
                     
                 </form>
 
@@ -56,13 +60,13 @@
                 </div>
 
                 <button class="btn-google" onclick="loginWithGoogle()">
-                  <img src="../static/imagens/menu/Entrar/Chrome-Google-Logo-PNG-Image-Background.webp" alt="" class="icon_google
-                    <span class="google-icon"></span>
-                    Cadastrar Com Google
+                  <img src="../static/imagens/menu/Entrar/Chrome-Google-Logo-PNG-Image-Background.webp" alt="" class="icon_google">
+                    
+                    Cadastrar com Google
                 </button>
 
                 <div class="signup-link">
-                    Tem uma Conta? <a href="../templates/Entrar.html">Entre Aqui</a>
+                    Ja tem uma conta? <a href="../templates/Entrar.html">Entre Aqui</a>
                 </div>
             </div>
 
@@ -111,6 +115,6 @@
         </div>
     </section>
 
-    
+    <script src="../static/js/Entrar.js"></script>
 </body>
 </html>

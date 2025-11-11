@@ -111,10 +111,6 @@ body {
     border-radius: 12px;
 }
 
-/* REMOVIDO: .video-info */
-/* REMOVIDO: .carousel-indicators e .indicator */
-/* REMOVIDO: .carousel-btn */
-
 .logo {
     display: flex;
     align-items: center;
@@ -215,11 +211,17 @@ input[type="checkbox"] {
     text-decoration: underline;
 }
 
+/* ESTILOS DO BOTÃO CORRIGIDOS */
 .btn-primary {
-    width: 250px;
+    /* ADICIONADO: Torna o link um elemento de bloco */
+    display: block; 
+    /* ALTERADO: Ocupa 100% da largura do contêiner */
+    width: 100%; 
     text-decoration: none;
     
-    padding: 14px,;
+    /* CORRIGIDO: Removida a vírgula errada */
+    padding: 14px; 
+    
     background: linear-gradient(135deg, #0ea5e9, #0284c7);
     border: none;
     border-radius: 8px;
@@ -229,6 +231,8 @@ input[type="checkbox"] {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 15px;
+    /* ADICIONADO: Centraliza o texto */
+    text-align: center; 
 }
 
 .btn-primary:hover {
@@ -335,8 +339,6 @@ input[type="checkbox"] {
     .form-container {
         padding: 40px 30px;
     }
-
-    /* REMOVIDO ajustes para .carousel-btn no responsivo */
 }
 
 @media (max-width: 640px) {
