@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - Gaming Store</title>
+    <title>Leviatha - Cadastrar</title>
+    <link rel="icon" type="image/png" href="../static/imagens/menu/logo.png">
     <link rel="stylesheet" href="../static/css/Entrar.css">
 </head>
 <body>
@@ -19,8 +20,8 @@
                     <span class="logo-text">Leviathan</span>
                 </div>
 
-                <h1>Bem-vindo de volta</h1>
-                <p class="subtitle">Entre na sua conta para continuar</p>
+                <h1>Cadastre-se Aqui</h1>
+                <p class="subtitle">Cadastre-se</p>
 
                 <form id="loginForm">
                     <div class="input-group">
@@ -35,15 +36,18 @@
                         <span class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</span>
                     </div>
 
+                    <div class="input-group">
+                        <label for="password">Confirmar Senha</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        <span class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</span>
+                    </div>
+
                     <div class="remember-forgot">
-                        <label class="remember-me">
-                            <input type="checkbox" id="remember" name="remember">
-                            <span>Lembrar-me</span>
-                        </label>
-                        <a href="#" class="forgot-link">Esqueci minha senha</a>
+                        
+                        
                     </div>
                     
-                    <a href="../templates/index.html" class="btn-primary">Entrar</a>
+                    <a href="../templates/index.html"><button type="submit" class="btn-primary">Cadastrar</button></a>
                     
                 </form>
 
@@ -54,11 +58,11 @@
                 <button class="btn-google" onclick="loginWithGoogle()">
                   <img src="../static/imagens/menu/Entrar/Chrome-Google-Logo-PNG-Image-Background.webp" alt="" class="icon_google
                     <span class="google-icon"></span>
-                    Entrar com Google
+                    Cadastrar Com Google
                 </button>
 
                 <div class="signup-link">
-                    Não tem uma conta? <a href="../templates/Cadastrar.html">Cadastre-se agora</a>
+                    Tem uma Conta? <a href="../templates/Entrar.html">Entre Aqui</a>
                 </div>
             </div>
 
@@ -107,6 +111,6 @@
         </div>
     </section>
 
-    <script src="../static/js/Entrar.js"></script>
+    
 </body>
 </html>

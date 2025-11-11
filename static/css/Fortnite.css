@@ -105,7 +105,7 @@
     font-size: 20px;
     position: relative;
     right: 15px;
-    color: rgb(0, 183, 255);
+    color: rgb(19, 136, 182);
   }
   
   .search-bar {
@@ -435,8 +435,8 @@ a{
   }
   
   .age-rating-box {
-    background-color: #ffc107;
-    color: #333;
+    background-color: #ecb511;
+    color: #d3d615;
     padding: 15px 20px;
     border-radius: 8px;
     display: flex;

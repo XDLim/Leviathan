@@ -61,7 +61,7 @@ function loginWithGoogle() {
     console.log('Login com Google iniciado');
     
     // Aqui você vai implementar o OAuth do Google
-    alert('Login com Google!\n\nImplemente a autenticação OAuth do Google aqui.');
+    <script src="https://accounts.google.com/gsi/client" async></script>
 }
 
 // Limpar erros ao digitar
