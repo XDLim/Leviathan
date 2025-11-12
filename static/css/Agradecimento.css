@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+    background: linear-gradient(180deg, black, black, #2f4152, #80B1DF);
+    
+}
+
+
+
+.Titulo{
+    color: #2d8df5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 460px;
+}
+
+
+
+.Imagem{
+    height: 100px;
+    position: relative;
+    left: 930px;
+    top: 410px;
+}
