@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - Checkout Leviathan</title>
+    <link rel="icon" href="../static/imagens/menu/logo.png">
+    <link rel="stylesheet" href="../static/css/Finalizar.css"> 
+    
+</head>
+<body>
+    <header class="header_leviathan">
+        <div class="header-container">
+            <a href="../templates/index.html">
+                <img src="../static/imagens/menu/logo.png" alt="">
+            </a>
+        </div>
+    </header>
+    
+    <main class="main_checkout_leviathan">
+        <h1 class="titulo_pagina_leviathan">Finalizar Compra</h1>
+        
+        <div class="container_principal_checkout_leviathan">
+            
+            <section class="secao_form_checkout_leviathan">
+                
+                <h2 class="secao_titulo_leviathan">1. Informações de Contato</h2>
+                <form id="form_checkout_leviathan">
+                    
+                    <div class="form_group_leviathan">
+                        <label for="nome_leviathan">Nome Completo</label>
+                        <input type="text" id="nome_leviathan" name="nome" required>
+                    </div>
+                    
+                    <div class="form_group_leviathan">
+                        <label for="email_leviathan">Email</label>
+                        <input type="email" id="email_leviathan" name="email" required>
+                        <small>Os links de download serão enviados para este email.</small>
+                    </div>
+
+                    <h2 class="secao_titulo_leviathan">2. Método de Pagamento</h2>
+                    
+                    <div class="metodo_pagamento_container_leviathan">
+                        
+                        <div class="opcao_pagamento_leviathan ativo">
+                            <input type="radio" id="cartao_leviathan" name="pagamento" value="cartao" checked>
+                            <label for="cartao_leviathan">Cartão de Crédito/Débito</label>
+                            
+                            <div class="detalhes_pagamento_leviathan">
+                                <div class="form_group_leviathan">
+                                    <label for="numero_cartao_leviathan">Número do Cartão</label>
+                                    <input type="text" id="numero_cartao_leviathan" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="form_row_leviathan">
+                                    <div class="form_group_leviathan">
+                                        <label for="validade_leviathan">Validade</label>
+                                        <input type="text" id="validade_leviathan" placeholder="MM/AA">
+                                    </div>
+                                    <div class="form_group_leviathan">
+                                        <label for="cvv_leviathan">CVV</label>
+                                        <input type="text" id="cvv_leviathan" placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="opcao_pagamento_leviathan">
+                            <input type="radio" id="boleto_leviathan" name="pagamento" value="boleto">
+                            <label for="boleto_leviathan">Boleto Bancário</label>
+                             <div class="detalhes_pagamento_leviathan">
+                                <small>O boleto pode levar até 2 dias úteis para compensação.</small>
+                            </div>
+                        </div>
+
+                         <div class="opcao_pagamento_leviathan">
+                            <input type="radio" id="pix_leviathan" name="pagamento" value="pix">
+                            <label for="pix_leviathan">PIX</label>
+                            <div class="detalhes_pagamento_leviathan">
+                                <small>O código QR será exibido após a confirmação do pedido.</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="termos_leviathan">
+                        <input type="checkbox" id="termos_leviathan" required>
+                        <label for="termos_leviathan">Eu concordo com os Termos de Serviço e Política de Privacidade.</label>
+                    </div>
+                    
+                    <button type="submit" class="btn_finalizar_compra_leviathan">
+                        Pagar R$ 0,00 </button>
+                    
+                </form>
+            </section>
+            
+            <aside class="resumo_checkout_leviathan">
+                <h2>Seu Pedido</h2>
+                <div class="item_resumo_leviathan">
+                    <img src="../static/imagens/menu/Elden Ring.jpg" alt="Elden Ring">
+                    <span>Elden Ring </span>
+                    <span class="preco_resumo_leviathan">R$ 249,90</span>
+                </div>
+                <div class="item_resumo_leviathan">
+                    <img src="../static/imagens/menu/God of War.png" alt="God of War Ragnarök">
+                    <span>God of War Ragnarök</span>
+                    <span class="preco_resumo_leviathan">R$ 199,92</span>
+                </div>
+
+                <div class="divisor_resumo_leviathan"></div>
+                
+                <div class="resumo-linha">
+                    <span>Subtotal:</span>
+                    <span id="subtotal_checkout">R$ 449,82</span>
+                </div>
+                <div class="resumo-linha">
+                    <span>Frete:</span>
+                    <span>GRÁTIS</span>
+                </div>
+                <div class="resumo-linha total-final">
+                    <strong>Total a Pagar:</strong>
+                    <strong id="total_final_checkout">R$ 449,82</strong>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <footer class="footer_leviathan">
+        <p class="copyright_leviathan">© 2025 Leviathan. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../static/js/Finalizar.js"></script>
+</body>
+</html>
