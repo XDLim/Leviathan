@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --cor-fundo: #000000;
+  --cor-letra: #80B1DF;
+  --fonte-principal: Roboto;
+  --cor-footer: #232426;
+  --barra-pesquisa: #2B2B2B;
+  --destaque: #211F1F;
+  --cor-botao: #007AFF;
+  --preco-antes: #B2A0A0;
+  --descricao-footer: #7C6E6E;
+  --cor-botao-cadastrar: #007bff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, black, black, #2f4152, #80B1DF);
+  font-family: var(--fonte-principal);
+  color: white;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* ====== CABEÇALHO ====== */
+.header {
+  background-color: transparent;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.logo-site {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+/* ====== SEÇÃO SOBRE ====== */
+.container-animado {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.linha-animada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.star-symbol {
+  font-size: 40px;
+  color: var(--cor-letra);
+  animation: clareando 2s;
+}
+
+@keyframes clareando {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.left-line,
+.right-line {
+  flex: 1;
+  border: 1px solid var(--cor-letra);
+  background-color: var(--cor-letra);
+  animation: linha-left 4s forwards;
+}
+
+.right-line {
+  flex: 1;
+  border: 1px solid var(--cor-letra);
+  background-color: var(--cor-letra);
+  animation: linha-right 4s forwards;
+}
+
+@keyframes linha-left{
+  from{
+    margin-left: 0px;
+  }
+
+  to{
+    margin-left: 500px;
+  }
+}
+
+@keyframes linha-right{
+  from{
+    margin-right: 0px;
+  }
+
+  to{
+    margin-right: 500px;
+  }
+}
+
+.escrita-sobre {
+  margin-top: 3rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  animation: escrita 3s forwards;
+}
+
+@keyframes escrita {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sugestao {
+  padding: 10px 20px;
+  background-color: black;
+  border: 1px solid var(--cor-letra);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sugestao:hover {
+  transform: scale(1.1);
+  background-color: var(--cor-letra);
+}
+
+.sugestao a {
+  color: white;
+  text-decoration: none;
+}
+
+.sugestao a:hover {
+  color: black;
+}
+
+/* ====== MISSÕES E VALORES ====== */
+.mission-valuer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  text-align: center;
+  margin: 5rem;
+  flex-wrap: wrap; /* <-- ajuda na responsividade */
+}
+
+.mission, .valuer {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.line-division {
+  width: 2px;
+  background-color: white;
+  animation: line-division 3s forwards;
+}
+
+@keyframes line-division {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+.title-valuer,
+.title-mission {
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+  color: var(--cor-letra);
+  animation: escrita 3s forwards;
+}
+
+li {
+  margin-bottom: 1.5rem;
+  animation: escrita 3s forwards;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.valuer-descrition {
+  list-style: none;
+}
+
+/* ====== REDES SOCIAIS ====== */
+.redes-sociais {
+  text-align: center;
+  margin-top: 6rem;
+  padding: 2rem;
+}
+
+.midias {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.midias button {
+  background-color: transparent;
+  border: none;
+}
+
+.zap {
+  position: relative;
+  top: 10px;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 1024px) {
+  .mission-valuer {
+    gap: 2rem;
+    margin: 3rem 2rem;
+  }
+  .line-division {
+    display: none; /* tira a linha central em telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+  .container-animado h1 {
+    font-size: 1.8rem;
+  }
+  .star-symbol {
+    font-size: 30px;
+  }
+  .mission-valuer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mission, .valuer {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .logo-site {
+    height: 35px;
+  }
+  .escrita-sobre {
+    font-size: 0.9rem;
+  }
+  .midias img {
+    width: 80px;
+  }
+}

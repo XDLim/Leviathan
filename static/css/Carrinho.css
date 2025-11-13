@@ -1,0 +1,296 @@
+/*
+ * DADOS GERAIS: Carrinho_Leviathan.css
+ * Organização: Variáveis -> Estilos Globais -> Estilos Específicos (Main, Itens, Resumo)
+ */
+
+/* ==================================== */
+/* 1. VARIÁVEIS DE COR E FONTES */
+/* ==================================== */
+:root{
+    --cor-fundo: #000000;
+    --cor-letra-principal: #80B1DF;
+    --cor-destaque-fundo: #211F1F; 
+    --cor-botao-principal: #007AFF;
+    --cor-texto-secundario: #B2A0A0;
+    --cor-barra-pesquisa: #2B2B2B; 
+    --cor-footer: #232426;
+    --cor-erro: #ff5555;
+    --cor-sucesso: #4CAF50;
+}
+
+/* ==================================== */
+/* 2. ESTILOS GLOBAIS BÁSICOS */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-letra-principal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos de Estrutura (Header e Footer) */
+.header_leviathan {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer_leviathan {
+    background-color: var(--cor-footer);
+    padding: 4rem;
+    margin-top: auto;
+}
+.copyright_leviathan {
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 3. ESTILOS DA PÁGINA DO CARRINHO (MAIN) */
+/* ==================================== */
+
+.main_carrinho_leviathan {
+    flex-grow: 1; 
+    padding: 60px 10%;
+    min-height: 80vh;
+}
+
+.titulo_pagina_leviathan {
+    color: #007AFF;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container_principal_carrinho_leviathan {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Seção de Itens do Carrinho --- */
+.carrinho-itens-lista {
+    flex: 3;
+    min-width: 60%;
+    background-color: var(--cor-destaque-fundo); 
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 20px;
+}
+
+.item-carrinho:last-child {
+    border-bottom: none;
+}
+
+.item-imagem img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-detalhes {
+    flex-grow: 1;
+}
+
+.item-detalhes h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.item-detalhes p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9em;
+}
+
+/* Controles de Quantidade */
+.item-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-quantidade button {
+    background: var(--cor-barra-pesquisa);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.item-quantidade button:hover {
+    background-color: #444;
+}
+
+.item-quantidade input {
+    width: 40px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+.item-preco {
+    color: white;
+    font-weight: 600;
+    width: 80px;
+    text-align: right;
+}
+
+.btn-remover {
+    background: transparent;
+    border: none;
+    color: var(--cor-erro);
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.2s;
+}
+
+.btn-remover:hover {
+    color: #ff0000;
+}
+
+#carrinho-vazio-mensagem {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--cor-texto-secundario);
+}
+
+/* --- Seção de Resumo do Pedido --- */
+.resumo-pedido {
+    flex: 1;
+    background-color: var(--cor-destaque-fundo);
+    padding: 25px;
+    border-radius: 15px;
+    min-width: 250px;
+    position: sticky;
+    top: 20px;
+}
+
+.resumo-pedido h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--cor-letra-principal);
+}
+
+.total-final {
+    color: white;
+    font-size: 1.3em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-checkout {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: var(--cor-botao-principal);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-checkout:hover {
+    background-color: #0056b3;
+}
+
+/* --- Ações Rodapé --- */
+.acoes_rodape_carrinho {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: left;
+}
+.btn_continuar_comprando_leviathan {
+    color: var(--cor-letra-principal);
+    transition: color 0.2s;
+}
+.btn_continuar_comprando_leviathan:hover {
+    color: white;
+}
+
+
+/* ==================================== */
+/* 4. RESPONSIVIDADE */
+/* ==================================== */
+@media (max-width: 1000px) {
+    .container_principal_carrinho_leviathan {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resumo-pedido {
+        position: static;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 600px) {
+    .item-carrinho {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .item-preco,
+    .btn-remover {
+        flex-basis: 50%;
+        text-align: center;
+        margin-left: 0 !important;
+    }
+    .item-imagem {
+        flex-basis: 100%;
+    }
+    .item-detalhes {
+        text-align: center;
+    }
+    .item-quantidade {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

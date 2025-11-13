@@ -1,0 +1,243 @@
+/*
+ * DADOS GERAIS: Desejos_Leviathan.css
+ * Organização: Variáveis -> Estilos Globais -> Estilos Específicos (Main, Itens, Ações)
+ */
+
+/* ==================================== */
+/* 1. VARIÁVEIS DE COR E FONTES */
+/* ==================================== */
+:root{
+    --cor-fundo: #000000;
+    --cor-letra-principal: #80B1DF;
+    --cor-destaque-fundo: #211F1F; /* Fundo dos cards de itens */
+    --cor-botao-principal: #007AFF;
+    --cor-texto-secundario: #B2A0A0; /* Usado para preços antigos/textos menores */
+    --cor-barra-pesquisa: #2B2B2B; /* Usado para botões secundários */
+    --cor-footer: #232426;
+    --cor-sucesso: #4CAF50; /* Verde para promoções/sucesso */
+}
+
+/* ==================================== */
+/* 2. ESTILOS GLOBAIS BÁSICOS */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-letra-principal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Exemplo de Header e Footer para consistência visual */
+.header_leviathan {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer_leviathan {
+    background-color: var(--cor-footer);
+    padding: 4rem;
+    margin-top: auto;
+}
+.copyright_leviathan {
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 3. ESTILOS DA LISTA DE DESEJOS (MAIN) */
+/* ==================================== */
+
+.main_lista_desejos_leviathan {
+    flex-grow: 1; 
+    padding: 60px 10%;
+    min-height: 80vh;
+}
+
+.titulo_pagina_leviathan {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container_itens_desejos_leviathan {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    background-color: var(--cor-destaque-fundo);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+/* --- Estilo de Cada Item Individual --- */
+.item_desejo_leviathan {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 20px;
+}
+
+.item_desejo_leviathan:last-of-type {
+    border-bottom: none;
+}
+
+.item_imagem_leviathan img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item_detalhes_leviathan {
+    flex-grow: 1;
+}
+
+.item_nome_leviathan {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.item_plataforma_leviathan {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9em;
+}
+
+.item_preco_atual_leviathan {
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+/* Estilos de preço */
+.item_preco_atual_leviathan.promocao {
+    color: var(--cor-sucesso);
+}
+
+.preco_antigo_leviathan {
+    color: var(--cor-texto-secundario);
+    text-decoration: line-through;
+    font-size: 0.85em;
+    margin-right: 10px;
+}
+
+/* --- Botões de Ação --- */
+.item_acoes_leviathan {
+    display: flex;
+    gap: 10px;
+    min-width: 300px;
+}
+
+.item_acoes_leviathan button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    border: none;
+}
+
+.btn_mover_carrinho_leviathan {
+    background-color: var(--cor-botao-principal);
+    color: white;
+}
+
+.btn_mover_carrinho_leviathan:hover {
+    background-color: #0056b3;
+}
+
+.btn_remover_desejo_leviathan {
+    background-color: var(--cor-barra-pesquisa);
+    color: var(--cor-texto-secundario);
+    border: 1px solid #444;
+}
+
+.btn_remover_desejo_leviathan:hover {
+    background-color: #ff5555;
+    color: white;
+    border-color: #ff0000;
+}
+
+/* --- Ações Gerais da Página --- */
+.acoes_gerais_desejos_leviathan {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.btn_continuar_comprando_leviathan {
+    color: var(--cor-letra-principal);
+    transition: color 0.2s;
+}
+
+.btn_continuar_comprando_leviathan:hover {
+    color: white;
+}
+
+.btn_limpar_lista_leviathan {
+    background-color: transparent;
+    border: 1px solid var(--cor-texto-secundario);
+    color: var(--cor-texto-secundario);
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn_limpar_lista_leviathan:hover {
+    background-color: var(--cor-barra-pesquisa);
+    color: white;
+}
+
+/* ==================================== */
+/* 4. RESPONSIVIDADE */
+/* ==================================== */
+@media (max-width: 768px) {
+    .item_desejo_leviathan {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .item_imagem_leviathan,
+    .item_detalhes_leviathan {
+        flex-basis: 100%;
+    }
+    
+    .item_acoes_leviathan {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .acoes_gerais_desejos_leviathan {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}

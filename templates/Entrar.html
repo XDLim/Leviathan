@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Gaming Store</title>
+    <link rel="stylesheet" href="../static/css/Entrar.css">
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <section class="login-section">
+        <div class="content-wrapper">
+            <div class="form-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                      <img src="../static/imagens/batman/logo.png" alt="">
+                    </div>
+                    <span class="logo-text">Leviathan</span>
+                </div>
+
+                <h1>Bem-vindo de volta</h1>
+                <p class="subtitle">Entre na sua conta para continuar</p>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        <span class="error-message" id="emailError">Por favor, insira um e-mail válido</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        <span class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</span>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <span>Lembrar-me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Esqueci minha senha</a>
+                    </div>
+                    
+                    <a href="../templates/index.html" class="btn-primary">Entrar</a>
+                    
+                </form>
+
+                <div class="divider">
+                    <span>OU</span>
+                </div>
+
+                <button class="btn-google" onclick="loginWithGoogle()">
+                  <img src="../static/imagens/menu/Entrar/Chrome-Google-Logo-PNG-Image-Background.webp" alt="" class="icon_google">
+                    
+                    Entrar com Google
+                </button>
+
+                <div class="signup-link">
+                    Não tem uma conta? <a href="../templates/Cadastrar.html">Cadastre-se agora</a>
+                </div>
+            </div>
+
+            <div class="videos-container">
+                <div class="video-carousel">
+                    <div class="video-slide active">
+                        <video autoplay loop muted playsinline>
+                            <source src="../static/imagens/fortnite/video gameplay.mp4.webm.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-slide">
+                        <video loop muted playsinline>
+                            <source src="../static/imagens/fc25/video gameplay.mp4.webm.mp4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-slide">
+                        <video loop muted playsinline>
+                            <source src="../static/imagens/nba2k25/NBA2K25 video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-slide">
+                        <video loop muted playsinline>
+                            <source src="../static/imagens/rocket/video gameplay.mp4.webm.mp4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-slide">
+                        <video loop muted playsinline>
+                            <source src="../static/imagens/red dead/video gameplay.mp4.webm.mp4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-slide">
+                        <video loop muted playsinline>
+                            <source src="../static/imagens/red dead/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <script src="../static/js/Entrar.js"></script>
+</body>
+</html>

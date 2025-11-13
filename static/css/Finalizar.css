@@ -1,0 +1,280 @@
+/*
+ * DADOS GERAIS: Checkout_Leviathan.css
+ * Organização: Variáveis -> Estilos Globais -> Estilos Específicos (Form, Resumo)
+ */
+
+/* ==================================== */
+/* 1. VARIÁVEIS DE COR E FONTES */
+/* ==================================== */
+:root{
+    --cor-fundo: #000000;
+    --cor-letra-principal: #80B1DF;
+    --cor-destaque-fundo: #211F1F; 
+    --cor-botao-principal: #007AFF;
+    --cor-texto-secundario: #B2A0A0;
+    --cor-barra-pesquisa: #2B2B2B; 
+    --cor-footer: #232426;
+    --cor-botao-pagar: #4CAF50; /* Verde para Pagar/Confirmar */
+}
+
+/* ==================================== */
+/* 2. ESTILOS GLOBAIS BÁSICOS */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-letra-principal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos de Estrutura (Header e Footer) */
+.header_leviathan {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer_leviathan {
+    background-color: var(--cor-footer);
+    padding: 4rem;
+    margin-top: auto;
+}
+.copyright_leviathan {
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 3. ESTILOS DA PÁGINA DE CHECKOUT (MAIN) */
+/* ==================================== */
+
+.main_checkout_leviathan {
+    flex-grow: 1; 
+    padding: 60px 10%;
+    min-height: 80vh;
+}
+
+.titulo_pagina_leviathan {
+    color: #007AFF;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container_principal_checkout_leviathan {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --- Formulário (Form) --- */
+.secao_form_checkout_leviathan {
+    flex: 3;
+    background-color: var(--cor-destaque-fundo); 
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.secao_titulo_leviathan {
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color: var(--cor-letra-principal);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.form_group_leviathan {
+    margin-bottom: 20px;
+}
+
+.form_group_leviathan label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.form_group_leviathan input,
+.form_group_leviathan select {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-barra-pesquisa);
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form_row_leviathan {
+    display: flex;
+    gap: 20px;
+}
+.form_row_leviathan .form_group_leviathan {
+    flex: 1;
+}
+
+.form_group_leviathan small {
+    display: block;
+    margin-top: 5px;
+    color: var(--cor-texto-secundario);
+    font-size: 0.85em;
+}
+
+/* --- Método de Pagamento --- */
+.metodo_pagamento_container_leviathan {
+    margin-bottom: 30px;
+}
+
+.opcao_pagamento_leviathan {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+}
+
+.opcao_pagamento_leviathan.ativo {
+    border-color: var(--cor-botao-principal);
+    background-color: #383838;
+}
+
+.opcao_pagamento_leviathan label {
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.detalhes_pagamento_leviathan {
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 1px dashed #555;
+}
+
+/* --- Termos e Botão Final --- */
+.termos_leviathan {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+
+.termos_leviathan input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn_finalizar_compra_leviathan {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor-botao-pagar);
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn_finalizar_compra_leviathan:hover {
+    background-color: #3c9e40;
+}
+
+/* --- Resumo (Aside) --- */
+.resumo_checkout_leviathan {
+    flex: 1;
+    background-color: var(--cor-destaque-fundo);
+    padding: 25px;
+    border-radius: 15px;
+    min-width: 250px;
+    position: sticky;
+    top: 20px;
+}
+
+.resumo_checkout_leviathan h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.item_resumo_leviathan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.item_resumo_leviathan img {
+    width: 30px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.divisor_resumo_leviathan {
+    border-top: 1px dashed #555;
+    margin: 15px 0;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: var(--cor-letra-principal);
+}
+
+.total-final {
+    color: white;
+    font-size: 1.3em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==================================== */
+/* 4. RESPONSIVIDADE */
+/* ==================================== */
+@media (max-width: 1000px) {
+    .container_principal_checkout_leviathan {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resumo_checkout_leviathan {
+        position: static;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 600px) {
+    .form_row_leviathan {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
