@@ -1,9 +1,10 @@
 body {
-<<<<<<< HEAD:Menu/Descobrir/ddes.css
     background: linear-gradient(#000000, #0e749a);
-=======
+
     background: linear-gradient(#000000, #0056b3);
->>>>>>> adb7242e7f2fe794f1a21c00b7be399f05701868:static/css/ddes.css
+
+    background: linear-gradient(#000000, #0056b3);
+
     color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
