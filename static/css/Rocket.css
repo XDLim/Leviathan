@@ -1,18 +1,18 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
   }
   
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #000000;
-    color: #f0f0f0;
+    background-color: #000000; 
+    color: #f0f0f0; 
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; 
     position: relative;
-    min-height: 100vh;
-    z-index: 1;
+    min-height: 100vh; 
+    z-index: 1; 
   }
   
   .video-background-container {
@@ -28,7 +28,7 @@
   #background-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
     filter: brightness(0.6);
   }
   
@@ -39,18 +39,18 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)); 
-    z-index: 0;
+    z-index: 0; 
   }
   
   .page-content-wrapper {
-    position: relative;
+    position: relative; 
     z-index: 1;
     background-color: transparent;
   }
   
   a {
     color: #f0f0f0;
-    text-decoration: none;
+    text-decoration: none; 
   }
   
   a:hover {
@@ -64,7 +64,7 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative;
+    position: relative; 
     z-index: 2;
   }
   
@@ -75,7 +75,7 @@
     align-items: center;
   }
   
-  .site-logo {
+  .logo-site {
     height: 40px;
     width: auto;
     margin-right: 20px;
@@ -92,6 +92,13 @@
   .main-nav a:hover,
   .secondary-nav a:hover {
     color: #fff;
+  }
+
+  .daimond{
+    font-size: 20px;
+    position: relative;
+    right: 15px;
+    color: rgb(19, 136, 182);
   }
   
   .search-bar {
@@ -152,6 +159,28 @@
     background-color: #0056b3;
     border-color: #0056b3;
   }
+
+.barra_pesquisa{
+    background-color: var(--barra-pesquisa);
+    padding: 15px 15px;
+    align-items: center;
+    border-radius: 100px;
+    margin: 3rem;
+    margin-left: 10rem;
+    width: 200px;
+    height: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.escrita_pesquisa{
+    background: transparent;
+    border: transparent;
+    color: white;
+    outline: 0  ;
+}
   
   .game-page-content {
     display: flex;
@@ -166,7 +195,8 @@
   }
   
   .game-details {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.85); 
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
@@ -392,9 +422,8 @@
   }
   
   .age-rating-box {
-    background-color: #0ce917;
+    background-color: #ecb511;
     color: #ffffff;
-    border-color: #ffffff;
     padding: 15px 20px;
     border-radius: 8px;
     display: flex;
@@ -550,12 +579,5 @@
   }
 }
 
-
-.daimond{
-    font-size: 20px;
-    position: relative;
-    right: 15px;
-    color: rgb(0, 153, 255);
-  }
 
 
