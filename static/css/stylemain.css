@@ -7,7 +7,7 @@
     --fonte-principal: Roboto;
     --cor-footer: #232426;
     --barra-pesquisa: #2B2B2B;
-    --destaque: #211F1F;
+    --destaque: #211f1f7c;
     --cor-botao: #007AFF;
     --preco-antes: #B2A0A0;
     --descricao-footer: #7C6E6E;
@@ -45,6 +45,8 @@ body{
     display: flex;
     align-items: center;
   }
+
+
   
   .logo-site {
     height: 40px;
@@ -379,31 +381,25 @@ a{
     margin-left: 1rem;
 }
 
-.jogos_destaques{
+.jogos_destaques {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
-    margin-right: -0.02%;
+    flex-wrap: nowrap;
     margin-top: 2.5rem;
 }
 
-.imagem_nba{
+.jogos_destaques > div {
     width: 25rem;
-    height: auto;
-    
+    display: flex;
+    flex-direction: column;
 }
 
-.valorant{
-    width: 25rem;
-    height: auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.imagem_gta{
-    width: 25rem;
+.jogos_destaques img {
+    width: 100%;
     height: 14rem;
+    object-fit: cover;
+    display: block;
 }
 
 
