@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrar - Gaming Store</title>
-    <link rel="stylesheet" href="../static/css/Entrar.css">
+    <link rel="stylesheet" href="../static/css/Cadastrar.css">
 </head>
 <body>
     <div class="background-image"></div>
@@ -22,36 +22,20 @@
                 <h1>Cadastre-se Aqui</h1>
                 <p class="subtitle">Cadastre-se no Nosso Site</p>
 
-                <form id="loginForm">
-                    <div class="input-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        <span class="error-message" id="emailError">Por favor, insira um e-mail válido</span>
-                    </div>
+                <form action="/Cadastrar" class="Cadastrar" method="POST">
 
-                    <div class="input-group">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" placeholder="••••••••" required>
-                        <span class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</span>
-                    </div>
+                    <label for="Email">Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
 
-                    <div class="input-group">
-                        <label for="password">Confirmar Senha</label>
-                        <input type="password" id="password" name="password" placeholder="••••••••" required>
-                        <span class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</span>
-                    </div>
+                    <label for="Senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" required>
+
+                    <label for="Confirmar-Senha">Confirmar Senha</label>
+                    <input type="password" name="confirmarsenha" placeholder="Confirmar senha" required>
 
 
+                    <button type="submit" class="btn-cadastro">Cadastrar</button>
 
-                    <div class="remember-forgot">
-                        <label class="remember-me">
-                            <input type="checkbox" id="remember" name="remember">
-                            <span>Lembrar-me</span>
-                        </label>
-                        
-                    </div>
-                    
-                    <a href="../templates/index.html" class="btn-primary">Entrar</a>
                     
                 </form>
 
@@ -115,6 +99,5 @@
         </div>
     </section>
 
-    <script src="../static/js/Entrar.js"></script>
 </body>
 </html>

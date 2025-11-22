@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -22,16 +22,18 @@
                 <h1>Bem-vindo de volta</h1>
                 <p class="subtitle">Entre na sua conta para continuar</p>
 
-                <form id="loginForm">
+                <form action="/Entrar" id="Entrar" method="POST">
                     <div class="input-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        <span class="error-message" id="emailError">Por favor, insira um e-mail válido</span>
-                    </div>
 
-                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+                        <span class="error-message" id="emailError">Por favor, insira um e-mail válido</span>
+
                         <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+
+                        <input type="password" id="password" name="senha" placeholder="••••••••" required>
+
                         <span class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres</span>
                     </div>
 
@@ -43,7 +45,7 @@
                         <a href="#" class="forgot-link">Esqueci minha senha</a>
                     </div>
                     
-                    <a href="../templates/index.html" class="btn-primary">Entrar</a>
+                    <button type="submit" class="logar">Login</button>
                     
                 </form>
 
