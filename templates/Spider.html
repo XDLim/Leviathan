@@ -34,16 +34,28 @@
                 <a href="../templates/Desejo.html">Lista de Desejos</a>
                 </nav>
             </div>
-            <div class="header-right">
-                <div class="search-bar">
-                    <input type="text" placeholder="Pesquisar loja">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <div class="auth-buttons">
-                    <a href="../templates/Entrar.html" class="btn-auth">Entrar</a>
-                    <a href="../Menu/Entrar e cadastrar/Cadastrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
-                </div>
+           <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar loja">
+                <button><i class="fas fa-search"></i></button>
             </div>
+            
+            <div class="auth-buttons">
+                {% if usuario %}
+                    <form id="formFoto" action="/upload_foto" method="POST" enctype="multipart/form-data">
+                        <img id="imagemEscolhida" class="foto-perfil" src="{{ usuario.foto_perfil if usuario.foto_perfil else '../static/imagens/fotos_perfil/user.webp'}}" alt="Clique para escolher">
+                        <input type="file" id="inputImagem" name="foto" accept="image/*" style="display:none">
+                    </form>
+
+
+                    <a href="/logout" class="btn-auth">Sair</a>
+                {% else %}
+                    <!-- Usuário não logado → mostra entrar/cadastrar -->
+                    <a href="/Entrar" class="btn-auth">Entrar</a>
+                    <a href="/Cadastrar" class="btn-auth btn-auth-primary">Cadastrar</a>
+                {% endif %}
+            </div>
+        </div>
         </header>
 
         <main class="game-page-content">
@@ -123,7 +135,10 @@
                 </div>
                 <div class="buy-options">
                     <button class="btn btn-primary">Obter</button>
-                    <button class="btn btn-secondary">Adicionar ao Carrinho</button>
+                    <form action="/adicionar_carrinho/{{ id_jogo }}" method="GET">
+                        <button type="submit" class="btn btn-secondary">Adicionar ao Carrinho</button>
+                    </form>
+
                     <button class="btn btn-secondary">Para a lista de Desejos</button>
                 </div>
             </aside>
@@ -166,6 +181,7 @@
     </div>
 
     <script src="../static/js/Spider.js"></script>
+    <script src="../static/js/imagemperfil.js"></script>
 
 </body>
 

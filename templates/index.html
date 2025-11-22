@@ -28,18 +28,18 @@
                 <img src="../static/imagens/menu/logo.png" alt="Logo do Site" class="logo-site">
             </a>
             <nav class="main-nav">
-                
+
             </nav>
         </div>
 
         <!--Dvisão central-->
         <div class="header-center">
             <nav class="secondary-nav">
-                <a href="../templates/Carrinho.html">Carrinho</a>
+                <a href="/carrinho">Carrinho</a>
                 <span class="daimond">&diams;</span>
-                <a href="../templates/Desejo.html">Lista de Desejos</a>
+                <a href="/jogo/Desejo">Lista de Desejos</a>
                 <span class="daimond">&diams;</span>
-                <a href="../templates/sobre.html">Sobre</a>
+                <a href="/jogo/sobre">Sobre</a>
             </nav>
         </div>
 
@@ -49,9 +49,21 @@
                 <input type="text" placeholder="Pesquisar loja">
                 <button><i class="fas fa-search"></i></button>
             </div>
+            
             <div class="auth-buttons">
-                <a href="/Entrar" class="btn-auth">Entrar</a>
-                <a href="/Cadastrar" class="btn-auth btn-auth-primary">Cadastrar</a>
+                {% if usuario %}
+                    <form id="formFoto" action="/upload_foto" method="POST" enctype="multipart/form-data">
+                        <img id="imagemEscolhida" class="foto-perfil" src="{{ usuario.foto_perfil if usuario.foto_perfil else '../static/imagens/fotos_perfil/user.webp'}}" alt="Clique para escolher">
+                        <input type="file" id="inputImagem" name="foto" accept="image/*" style="display:none">
+                    </form>
+
+
+                    <a href="/logout" class="btn-auth">Sair</a>
+                {% else %}
+                    <!-- Usuário não logado → mostra entrar/cadastrar -->
+                    <a href="/Entrar" class="btn-auth">Entrar</a>
+                    <a href="/Cadastrar" class="btn-auth btn-auth-primary">Cadastrar</a>
+                {% endif %}
             </div>
         </div>
 
@@ -62,13 +74,15 @@
 
         <!--Divisão do jogo em destaque aberto-->
         <div class="jogo_principal">
-            <a href="../templates/skul.html"><img src="../static/imagens/menu/Nome do jogo Skul.png" alt="nome.png" width="300px" class="nome_jogo_skul"></a>
+            <a href="/jogo/skul"><img src="../static/imagens/menu/Nome do jogo Skul.png" alt="nome.png"
+                    width="300px" class="nome_jogo_skul"></a>
 
             <p class="texto_skul">Aproveite e economize com nossas <br>promoções</p>
 
             <p class="texto_skul2">Tente uns dos nossos sucessos!</p>
 
-            <button class="botao_economizar"><a class="link_economizar" href="../templates/skul.html">Economize agora</a></button>
+            <button class="botao_economizar"><a class="link_economizar" href="/jogo/skul">Economize
+                    agora</a></button>
 
             <button class="botao_desejos"><a class="link_desejos" href="#">Lista de desejos</a></button>
         </div>
@@ -86,34 +100,34 @@
 
             <!--Jogo Skul: The Hero Slayer-->
             <div class="skul">
-                <a href="../templates/skul.html">
+                <a href="/jogo/skul">
                     <img src="../static/imagens/menu/Skul.png" alt="skul.png" width="110px">
                 </a>
-                <a class="nome_skul" href="../templates/skul.html">Skul: The Hero Slayer</a>
+                <a class="nome_skul" href="/jogo/skul">Skul: The Hero Slayer</a>
             </div>
 
             <!--Jogo Spider-man-->
             <div class="spider-man">
-                <a href="../templates/Spider.html">
+                <a href="/jogo/spider">
                     <img src="../static/imagens/menu/Spider Man.png" alt="spider.png" width="110px">
                 </a>
-                <a class="nome_spider" href="../templates/Spider.html">Marvel's Spider-Man</a>
+                <a class="nome_spider" href="/jogo/spider">Marvel's Spider-Man</a>
             </div>
 
             <!--Jogo Elden Ring-->
             <div class="elden">
-                <a href="../templates/Elder.html">
+                <a href="/jogo/Elder">
                     <img src="../static/imagens/menu/Elden Ring.jpg" alt="elden ring.png" width="110px">
                 </a>
-                <a class="nome_elden" href="../templates/Elder.html">ELDEN RING</a>
+                <a class="nome_elden" href="/jogo/Elder">ELDEN RING</a>
             </div>
 
             <!--Jogo Batman Arkhan Knight-->
             <div class="batman">
-                <a href="../templates/batman.html">
+                <a href="/jogo/batman">
                     <img src="../static/imagens/menu/Batman_Arkham_Knight_Capa.jpg" alt="roblox.png" width="100px">
                 </a>
-                <a class="nome_roblox" href="../templates/batman.html">Batman Arkhan Night   </a>
+                <a class="nome_roblox" href="/jogo/batman">Batman Arkhan Night </a>
             </div>
 
         </div>
@@ -131,48 +145,49 @@
 
         <!--jogo god of war-->
         <div class="god_of_war">
-            <a href="../templates/God.html">
+            <a href="/jogo/God">
                 <img src="../static/imagens/menu/God of War.png" alt="god of war.png" width="200px">
             </a>
 
-            <a class="nome_do_jogo" href="../templates/God.html"><br>God Of War <br>Ragnarok</a>
+            <a class="nome_do_jogo" href="/jogo/God"><br>God Of War <br>Ragnarok</a>
 
             <p class="preco">R$ 199,92</p>
         </div>
 
         <!--jogo fortnite-->
         <div class="fortnite">
-            <a href="../templates/Fortnite.html">
+            <a href="/jogo/Fortnite">
                 <img src="../static/imagens/menu/Fortnite.png" alt="fortnite.png" width="180px">
             </a>
-            <a class="nome_do_jogo" href="../templates/Fortnite.html"><br>Fortnite</a>
+            <a class="nome_do_jogo" href="/jogo/Fortnite"><br>Fortnite</a>
             <p class="preco">Gratis</p>
         </div>
 
         <!--Jogo Rocket League-->
         <div class="rocket_league">
-            <a href="../templates/Rocket.html">
+            <a href="/jogo/Rocket">
                 <img src="../static/imagens/menu/Rocket League.png" alt="rocket league.png" width="200px">
             </a>
-            <a class="nome_do_jogo" href="../templates/Rocket.html"><br>Rocket <br>League</a>
+            <a class="nome_do_jogo" href="/jogo/Rocket"><br>Rocket <br>League</a>
             <p class="preco">Gratis</p>
         </div>
 
         <!--Jogo Red Dead Redemption\-->
         <div class="red_dead">
-            <a href="../templates/Red.html">
-                <img src="../static/imagens/menu/Red Dead Redemption 2.png" alt="red dead redemption 2.png" width="200px">
+            <a href="/jogo/Red">
+                <img src="../static/imagens/menu/Red Dead Redemption 2.png" alt="red dead redemption 2.png"
+                    width="200px">
             </a>
-            <a class="nome_do_jogo" href="../templates/Red.html"><br>Red Dead <br>Redemption <br>2</a>
+            <a class="nome_do_jogo" href="/jogo/Red"><br>Red Dead <br>Redemption <br>2</a>
             <p class="preco">R$ 220,00</p>
         </div>
 
         <!--Jogo Fifa-->
         <div class="fifa">
-            <a href="../templates/FC25.html">
+            <a href="/jogo/fc2025">
                 <img src="../static/imagens/menu/FIFA 2025.png" alt="fifa 2025.png" width="200px">
             </a>
-            <a class="nome_do_jogo" href="../templates/FC25.html"><br>Edição <br>Standard do <br>EA SPORTS FC™ 25</a>
+            <a class="nome_do_jogo" href="/jogo/fc2025"><br>Edição <br>Standard do <br>EA SPORTS FC™ 25</a>
             <p class="preco">R$ 89,70</p>
         </div>
 
@@ -188,8 +203,9 @@
 
             <!--Parte do titulo e do botao ver mais-->
             <div class="estrela">
-                <svg class="icone_estrela" width="65" height="65" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5 12 2" />
+                <svg class="icone_estrela" width="65" height="65" viewbox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5 12 2" />
                 </svg>
 
                 <p class="titulo_destaque">Destaques</p>
@@ -202,14 +218,14 @@
 
             <!--Jogo NBA-->
             <div class="nba_2k25">
-                <a href="../templates/nba.html">
+                <a href="/jogo/nba">
                     <img src="../static/imagens/menu/NBA 2K25.jpg" alt="nba 2k25.png" width="400px" class="imagem_nba">
                 </a>
 
                 <p class="disponivel_embreve">Disponivel</p>
 
                 <div class="nome_nba">
-                    <a class="nome_jogos" href="../templates/nba.html">NBA 2k25</a>
+                    <a class="nome_jogos" href="/jogo/nba">NBA 2k25</a>
                 </div>
 
                 <div class="preco_destaque">
@@ -222,14 +238,15 @@
 
             <!--Jogo Valorant-->
             <div class="valorant">
-                <a href="../templates/Valorant.html">
-                    <img src="../static/imagens/menu/valorant.webp" alt="valorant.png" width="400px" class="imagem_death">
+                <a href="/jogo/Valorant">
+                    <img src="../static/imagens/menu/valorant.webp" alt="valorant.png" width="400px"
+                        class="imagem_death">
                 </a>
 
                 <p class="disponivel_embreve">Disponivel</p>
 
                 <div class="nome_vava">
-                    <a class="nome_jogos" href="../templates/Valorant.html">Valorant</a>
+                    <a class="nome_jogos" href="/jogo/Valorant">Valorant</a>
                 </div>
 
                 <div class="preco_destaque">
@@ -271,34 +288,37 @@
 
             <!--Novidade 1-->
             <div class="snopdog">
-                    <a href="../templates/Fortnite.html"> <img src="..//static/imagens/menu/SnopDog.png" alt="Fortnite.png" width="420px" class="imagens-animada"></a>
-                    
+                <a href="/jogo/Fortnite"> <img src="..//static/imagens/menu/SnopDog.png" alt="Fortnite.png"
+                        width="420px" class="imagens-animada"></a>
 
 
-                    <h2>Fortnite</h2>
 
-                    <p>De Long Beach para o mundo. É hora <br>de soltar os cachorros com o ícone <br>Musical Snoop Dogg!</p>
+                <h2>Fortnite</h2>
+
+                <p>De Long Beach para o mundo. É hora <br>de soltar os cachorros com o ícone <br>Musical Snoop Dogg!</p>
             </div>
 
             <!--novidade 2-->
             <div class="jogo_novos">
-                    <a href=""><img src="../static/imagens/menu/novos jogos disponiveis.webp" alt="jogos novos.png" width="420px" class="imagens-animada"></a>
-                    
-                    <a href="">Confira proximos lançamentos</a>
+                <a href=""><img src="../static/imagens/menu/novos jogos disponiveis.webp" alt="jogos novos.png"
+                        width="420px" class="imagens-animada"></a>
+
+                <a href="">Confira proximos lançamentos</a>
 
 
-                    <p>Aqui você vera jogos que vão ser lançados em <br>breve. Fique por dentro de todos eles aqui.</p>
+                <p>Aqui você vera jogos que vão ser lançados em <br>breve. Fique por dentro de todos eles aqui.</p>
             </div>
 
             <!--novidade 3-->
             <div class="jogos_promocao">
-                    <a href=""><img src="../static/imagens/menu/jogos na promoção.webp" alt="jogos da promoção.png" width="420px" class="imagens-animada"></a>
-                    
+                <a href=""><img src="../static/imagens/menu/jogos na promoção.webp" alt="jogos da promoção.png"
+                        width="420px" class="imagens-animada"></a>
 
 
-                    <a href="">Promoções</a>
 
-                    <p>Confira nossas promoções imperdiveis, <br>com preços unicos e exclusivos</p>
+                <a href="">Promoções</a>
+
+                <p>Confira nossas promoções imperdiveis, <br>com preços unicos e exclusivos</p>
             </div>
 
         </div>
@@ -330,7 +350,8 @@
             </div>
             <div class="footer-col footer-info">
                 <h4>Informações</h4>
-                <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade, segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.</p>
+                <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade,
+                    segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.</p>
             </div>
         </div>
         <div class="social-media">
@@ -339,6 +360,9 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script src="../static/js/imagemperfil.js"></script>
+
 
 </body>
 

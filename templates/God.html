@@ -14,7 +14,7 @@
 
     <div class="video-background-container">
         <video autoplay muted loop id="background-video">
-            <source src="../static/imagens/god_of_war/Trailer jogo GOW.mp4" type="video/mp4"> 
+            <source src="../static/imagens/god_of_war/Trailer jogo GOW.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
     </div>
@@ -28,28 +28,42 @@
                     <img src="../static/imagens/menu/logo.png" alt="Logo do Site" class="logo-site">
                 </a>
             </div>
-            
+
             <!--Dvisão central-->
             <div class="header-center">
                 <nav class="secondary-nav">
-                <a href="../templates/Carrinho.html">Carrinho</a>
-                <span class="daimond">&diams;</span>
-                <a href="../templates/Desejo.html">Lista de Desejos</a>
+                    <a href="../templates/Carrinho.html">Carrinho</a>
+                    <span class="daimond">&diams;</span>
+                    <a href="../templates/Desejo.html">Lista de Desejos</a>
                 </nav>
             </div>
-    
+
             <!--Divisão da direita-->
             <div class="header-right">
                 <div class="search-bar">
                     <input type="text" placeholder="Pesquisar loja">
                     <button><i class="fas fa-search"></i></button>
                 </div>
+
                 <div class="auth-buttons">
-                    <a href="../templates/Entrar.html" class="btn-auth">Entrar</a>
-                    <a href="../Menu/Entrar e cadastrar/Cadastrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
+                    {% if usuario %}
+                    <form id="formFoto" action="/upload_foto" method="POST" enctype="multipart/form-data">
+                        <img id="imagemEscolhida" class="foto-perfil"
+                            src="{{ usuario.foto_perfil if usuario.foto_perfil else '../static/imagens/fotos_perfil/user.webp'}}"
+                            alt="Clique para escolher">
+                        <input type="file" id="inputImagem" name="foto" accept="image/*" style="display:none">
+                    </form>
+
+
+                    <a href="/logout" class="btn-auth">Sair</a>
+                    {% else %}
+                    <!-- Usuário não logado → mostra entrar/cadastrar -->
+                    <a href="/Entrar" class="btn-auth">Entrar</a>
+                    <a href="/Cadastrar" class="btn-auth btn-auth-primary">Cadastrar</a>
+                    {% endif %}
                 </div>
             </div>
-            
+
         </header>
 
         <main class="game-page-content">
@@ -77,15 +91,24 @@
                     <div id="overview-wrapper" class="tab-content active">
                         <div class="game-media-carousel">
                             <div class="main-media">
-                                <img src="../static/imagens/god_of_war/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Fortnite Main Image" id="mainGameImage">
+                                <img src="../static/imagens/god_of_war/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp"
+                                    alt="Fortnite Main Image" id="mainGameImage">
                             </div>
                             <div class="thumbnails">
                                 <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
                                 <div class="thumbnail-items">
-                                    <img src="../static/imagens/god_of_war/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Thumbnail Fortnite Raiz" class="thumbnail active" data-image="pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png">
-                                    <img src="../static/imagens/god_of_war/landscape_comp.jpeg" alt="Thumbnail Landscape Comp" class="thumbnail" data-image="landscape_comp.jpeg">
-                                    <img src="../static/imagens/god_of_war/landscape_comp (1).jpeg" alt="Thumbnail Landscape Comp 1" class="thumbnail" data-image="landscape_comp (1).jpeg">
-                                    <img src="../static/imagens/god_of_war/landscape_comp (2).jpeg" alt="Thumbnail Landscape Comp 2" class="thumbnail" data-image="landscape_comp (2).jpeg">
+                                    <img src="../static/imagens/god_of_war/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp"
+                                        alt="Thumbnail Fortnite Raiz" class="thumbnail active"
+                                        data-image="pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png">
+                                    <img src="../static/imagens/god_of_war/landscape_comp.jpeg"
+                                        alt="Thumbnail Landscape Comp" class="thumbnail"
+                                        data-image="landscape_comp.jpeg">
+                                    <img src="../static/imagens/god_of_war/landscape_comp (1).jpeg"
+                                        alt="Thumbnail Landscape Comp 1" class="thumbnail"
+                                        data-image="landscape_comp (1).jpeg">
+                                    <img src="../static/imagens/god_of_war/landscape_comp (2).jpeg"
+                                        alt="Thumbnail Landscape Comp 2" class="thumbnail"
+                                        data-image="landscape_comp (2).jpeg">
                                 </div>
                                 <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
                             </div>
@@ -98,16 +121,24 @@
                     <div id="genres-content" class="tab-content">
                         <h2>Gêneros Principais</h2>
                         <ul>
-                            <li>Ação e Aventura: O jogo oferece combate intenso e áreas exploráveis, com Kratos e Atreus viajando pelos Nove Reinos.</li>
-                            <li>Hack and Slash: O combate é caracterizado por ataques físicos rápidos e poderosos, com foco em combos e habilidades especiais. </li>
-                            <li>Exploração: Os jogadores podem explorar diversos ambientes e descobrir segredos, itens colecionáveis e áreas opcionais. </li>
-                            <li>Quebra-cabeças: O jogo inclui desafios de resolução de problemas que exigem lógica e observação. </li>
-                            <li>Mitologia Nórdica: A história e os personagens são baseados na rica mitologia nórdica, com deuses, monstros e lendas. </li>
-                            <li>Combate Corpo a Corpo: O jogo enfatiza combates próximos, com foco em esquivas, paradas e golpes devastadores. </li>
+                            <li>Ação e Aventura: O jogo oferece combate intenso e áreas exploráveis, com Kratos e Atreus
+                                viajando pelos Nove Reinos.</li>
+                            <li>Hack and Slash: O combate é caracterizado por ataques físicos rápidos e poderosos, com
+                                foco em combos e habilidades especiais. </li>
+                            <li>Exploração: Os jogadores podem explorar diversos ambientes e descobrir segredos, itens
+                                colecionáveis e áreas opcionais. </li>
+                            <li>Quebra-cabeças: O jogo inclui desafios de resolução de problemas que exigem lógica e
+                                observação. </li>
+                            <li>Mitologia Nórdica: A história e os personagens são baseados na rica mitologia nórdica,
+                                com deuses, monstros e lendas. </li>
+                            <li>Combate Corpo a Corpo: O jogo enfatiza combates próximos, com foco em esquivas, paradas
+                                e golpes devastadores. </li>
                         </ul>
                         <h3>Sub-Gêneros e Elementos:</h3>
                         <ul>
-                            <li>God of War Ragnarök é um jogo de ação e aventura com elementos de hack and slash, com foco na narrativa e exploração, além de combates intensos. O jogo também incorpora elementos de RPG, como progressão de personagem e customização
+                            <li>God of War Ragnarök é um jogo de ação e aventura com elementos de hack and slash, com
+                                foco na narrativa e exploração, além de combates intensos. O jogo também incorpora
+                                elementos de RPG, como progressão de personagem e customização
                                 de equipamentos. </li>
 
                         </ul>
@@ -130,7 +161,10 @@
                 </div>
                 <div class="buy-options">
                     <button class="btn btn-primary">Obter</button>
-                    <button class="btn btn-secondary">Adicionar ao Carrinho</button>
+                    <form action="/adicionar_carrinho/{{ id_jogo }}" method="GET">
+                        <button type="submit" class="btn btn-secondary">Adicionar ao Carrinho</button>
+                    </form>
+
                     <button class="btn btn-secondary">Para a lista de Desejos</button>
                 </div>
             </aside>
@@ -161,7 +195,9 @@
                 </div>
                 <div class="footer-col footer-info">
                     <h4>Informações</h4>
-                    <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade, segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.</p>
+                    <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade,
+                        segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.
+                    </p>
                 </div>
             </div>
             <div class="social-media">

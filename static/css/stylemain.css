@@ -154,6 +154,21 @@ a{
     outline: 0  ;
 }
 
+
+.foto-perfil {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer; /* indica que é clicável */
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+/* Esconde o input de arquivo */
+#inputImagem {
+    display: none;
+}
+
 .jogos{
     display: flex;
     justify-content: space-between;

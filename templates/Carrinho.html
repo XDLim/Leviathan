@@ -1,75 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras - Leviathan</title>
-    <link rel="icon" href="../static/imagens/menu/logo.png">
-    <link rel="stylesheet" href="../static/css/Carrinho.css">
-    
+    <link rel="icon" href="/static/imagens/menu/logo.png">
+    <link rel="stylesheet" href="/static/css/Carrinho.css">
 </head>
+
 <body>
-    
+
     <header class="header_leviathan">
         <div class="header-container">
-            <a href="../templates/index.html"><img src="../static/imagens/menu/logo.png" alt=""></a>
-            <nav class="nav-menu">
-                
-            </nav>
+            <a href="/"><img src="/static/imagens/menu/logo.png" alt="Leviathan"></a>
+            <nav class="nav-menu"></nav>
         </div>
     </header>
-    
+
     <main class="main_carrinho_leviathan">
-        
         <h1 class="titulo_pagina_leviathan">Seu Carrinho de Compras</h1>
-        
+
         <div class="container_principal_carrinho_leviathan">
-            
+
             <section class="carrinho-itens-lista">
-                
-                <div class="item-carrinho" data-id="2">
-                    <div class="item-imagem">
-                        <img src="../static/imagens/menu/Elden Ring.jpg" alt="Elden Ring">
+                {% if itens %}
+                    {% for item in itens %}
+                    <div class="item-carrinho" data-id="{{ item.jogo_id }}">
+                        <div class="item-imagem">
+                            <img src="{{ item.imagem }}" alt="{{ item.nome }}">
+                        </div>
+                        <div class="item-detalhes">
+                            <h3>{{ item.nome }}</h3>
+                            <p>Quantidade: {{ item.quantidade }}</p>
+                        </div>
+                        <div class="item-preco">R$ {{ '%.2f'|format(item.preco * item.quantidade) }}</div>
                     </div>
-                    <div class="item-detalhes">
-                        <h3>Elden Ring</h3>
-                        <p>Plataforma: Multi</p>
-                    </div>
-                    <div class="item-quantidade">
-                        <button onclick="ajustarQuantidade(2, -1)">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button onclick="ajustarQuantidade(2, 1)">+</button>
-                    </div>
-                    <div class="item-preco">R$ 249,90</div>
-                    <button class="btn-remover" onclick="removerItem(2)">X</button>
-                </div>
-                
-                <div class="item-carrinho" data-id="5">
-                    <div class="item-imagem">
-                         <img src="../static/imagens/menu/God of War.png" alt="God of War Ragnarök">
-                    </div>
-                    <div class="item-detalhes">
-                        <h3>God of War Ragnarök</h3>
-                        <p>Plataforma: PS5/PC</p>
-                    </div>
-                    <div class="item-quantidade">
-                        <button onclick="ajustarQuantidade(5, -1)">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button onclick="ajustarQuantidade(5, 1)">+</button>
-                    </div>
-                    <div class="item-preco">R$ 199,92</div>
-                    <button class="btn-remover" onclick="removerItem(5)">X</button>
-                </div>
-                
-                <p id="carrinho-vazio-mensagem" style="display:none;"></p>
-                
+                    {% endfor %}
+                {% else %}
+                    <p>Seu carrinho está vazio.</p>
+                {% endif %}
             </section>
-            
+
             <aside class="resumo-pedido">
                 <h2>Resumo do Pedido</h2>
                 <div class="resumo-linha">
                     <span>Subtotal:</span>
-                    <span id="subtotal">R$ 449,82</span>
+                    <span id="subtotal">R$ {{ '%.2f'|format(itens|sum(attribute='preco')) }}</span>
                 </div>
                 <div class="resumo-linha">
                     <span>Frete:</span>
@@ -77,26 +54,21 @@
                 </div>
                 <div class="resumo-linha total-final">
                     <strong>Total:</strong>
-                    <strong id="total-final">R$ 449,82</strong>
+                    <strong id="total-final">R$ {{ '%.2f'|format(itens|sum(attribute='preco')) }}</strong>
                 </div>
-                
-                <a href="../templates/Finalizar.html" class="btn-checkout">
-                    Finalizar Compra
-                </a>
+
+                <a href="/Finalizar" class="btn-checkout">Finalizar Compra</a>
             </aside>
         </div>
-        
+
         <div class="acoes_rodape_carrinho">
-            <a href="../templates/index.html" class="btn_continuar_comprando_leviathan">
-                Continuar Comprando
-            </a>
+            <a href="/" class="btn_continuar_comprando_leviathan">Continuar Comprando</a>
         </div>
     </main>
-    
+
     <footer class="footer_leviathan">
         <p class="copyright_leviathan">© 2025 Leviathan. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="../static/js/Carrinho.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,50 +9,65 @@
     <link rel="stylesheet" href="../static/css/batman.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
     <div class="video-background-container">
         <video autoplay muted loop id="background-video">
-            <source src="/static/imagens/batman/video gameplay.mp4.webm.mp4" type="video/mp4"> 
+            <source src="/static/imagens/batman/video gameplay.mp4.webm.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
     </div>
 
-    <div class="page-content-wrapper"> 
+    <div class="page-content-wrapper">
         <!--Header com todos os codigos do site-->
-    <header class="header">
+        <header class="header">
 
-        <!--Divisão da esquerda-->
-        <div class="header-left">
-            <a href="../templates/index.html" class="logo-link">
-                <img src="/static/imagens/menu/logo.png" alt="Logo do Site" class="logo-site">
-            </a>
-            <nav class="main-nav">
-            </nav>
-        </div>
-        
-        <!--Dvisão central-->
-        <div class="header-center">
-            <nav class="secondary-nav">
-                <a href="../templates/Carrinho.html">Carrinho</a>
-                <span class="daimond">&diams;</span>
-                <a href="../templates/Desejo.html">Lista de Desejos</a>
+            <!--Divisão da esquerda-->
+            <div class="header-left">
+                <a href="../templates/index.html" class="logo-link">
+                    <img src="/static/imagens/menu/logo.png" alt="Logo do Site" class="logo-site">
+                </a>
+                <nav class="main-nav">
                 </nav>
-        </div>
+            </div>
 
-        <!--Divisão da direita-->
-        <div class="header-right">
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar loja">
-                <button><i class="fas fa-search"></i></button>
+            <!--Dvisão central-->
+            <div class="header-center">
+                <nav class="secondary-nav">
+                    <a href="../templates/Carrinho.html">Carrinho</a>
+                    <span class="daimond">&diams;</span>
+                    <a href="../templates/Desejo.html">Lista de Desejos</a>
+                </nav>
             </div>
-            <div class="auth-buttons">
-                <a href="../Menu/Entrar e cadastrar/Entrar.html" class="btn-auth">Entrar</a>
-                <a href="../Menu/Entrar e cadastrar/Cadastrar.html" class="btn-auth btn-auth-primary">Cadastrar</a>
+
+            <!--Divisão da direita-->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar loja">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="auth-buttons">
+                    {% if usuario %}
+                    <form id="formFoto" action="/upload_foto" method="POST" enctype="multipart/form-data">
+                        <img id="imagemEscolhida" class="foto-perfil"
+                            src="{{ usuario.foto_perfil if usuario.foto_perfil else '../static/imagens/fotos_perfil/user.webp'}}"
+                            alt="Clique para escolher">
+                        <input type="file" id="inputImagem" name="foto" accept="image/*" style="display:none">
+                    </form>
+
+
+                    <a href="/logout" class="btn-auth">Sair</a>
+                    {% else %}
+                    <!-- Usuário não logado → mostra entrar/cadastrar -->
+                    <a href="/Entrar" class="btn-auth">Entrar</a>
+                    <a href="/Cadastrar" class="btn-auth btn-auth-primary">Cadastrar</a>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-        
-    </header>
+
+        </header>
 
         <main class="game-page-content">
             <section class="game-info-section">
@@ -78,50 +94,69 @@
                     <div id="overview-wrapper" class="tab-content active">
                         <div class="game-media-carousel">
                             <div class="main-media">
-                                <img src="../static/imagens/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Fortnite Main Image" id="mainGameImage">
+                                <img src="../static/imagens/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp"
+                                    alt="Fortnite Main Image" id="mainGameImage">
                             </div>
                             <div class="thumbnails">
                                 <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
                                 <div class="thumbnail-items">
-                                    <img src="/static/imagens/batman/landscape_comp.jpeg" alt="Thumbnail Fortnite Raiz" class="thumbnail active" data-image="pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png">
-                                    <img src="/static/imagens/batman/landscape_comp (2).jpeg" alt="Thumbnail Landscape Comp" class="thumbnail" data-image="landscape_comp.jpeg">
-                                    <img src="/static/imagens/batman/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp" alt="Thumbnail Landscape Comp 1" class="thumbnail" data-image="landscape_comp (1).jpeg">
-                                    <img src="/static/imagens/batman/landscape_comp (1).jpeg" alt="Thumbnail Landscape Comp 2" class="thumbnail" data-image="landscape_comp (2).jpeg">
+                                    <img src="/static/imagens/batman/landscape_comp.jpeg" alt="Thumbnail Fortnite Raiz"
+                                        class="thumbnail active"
+                                        data-image="pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png">
+                                    <img src="/static/imagens/batman/landscape_comp (2).jpeg"
+                                        alt="Thumbnail Landscape Comp" class="thumbnail"
+                                        data-image="landscape_comp.jpeg">
+                                    <img src="/static/imagens/batman/pt-br-fnfig-36-00-c1s4-egs-launcher-keyart-og-blade-2560x1440-2560x1440-6e8e2548501d 1.png.webp"
+                                        alt="Thumbnail Landscape Comp 1" class="thumbnail"
+                                        data-image="landscape_comp (1).jpeg">
+                                    <img src="/static/imagens/batman/landscape_comp (1).jpeg"
+                                        alt="Thumbnail Landscape Comp 2" class="thumbnail"
+                                        data-image="landscape_comp (2).jpeg">
                                 </div>
                                 <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
                             </div>
                         </div>
 
                         <div class="overview-text-section">
-                            </div>
+                        </div>
                     </div>
 
                     <div id="genres-content" class="tab-content">
                         <h2>Gêneros Principais</h2>
                         <ul>
-                            <li>Batman: Arkham Knight é um jogo eletrônico de ação e aventura, com elementos de luta e exploração em um mundo aberto. O jogo é o quarto título principal da série Batman: Arkham e o último da desenvolvedora Rocksteady Studios a concluir a história iniciada em Arkham Asylum. </li>
-                            <li>O jogo se destaca pela sua jogabilidade que combina combate, exploração, uso do Batmóvel e resolução de quebra-cabeças, tudo ambientado em uma Gotham City expandida e detalhada. Além da história principal, o jogo oferece diversas missões secundárias e desafios, incluindo os do Charada, que adicionam profundidade ao mundo e aos personagens. </li>
+                            <li>Batman: Arkham Knight é um jogo eletrônico de ação e aventura, com elementos de luta e
+                                exploração em um mundo aberto. O jogo é o quarto título principal da série Batman:
+                                Arkham e o último da desenvolvedora Rocksteady Studios a concluir a história iniciada em
+                                Arkham Asylum. </li>
+                            <li>O jogo se destaca pela sua jogabilidade que combina combate, exploração, uso do Batmóvel
+                                e resolução de quebra-cabeças, tudo ambientado em uma Gotham City expandida e detalhada.
+                                Além da história principal, o jogo oferece diversas missões secundárias e desafios,
+                                incluindo os do Charada, que adicionam profundidade ao mundo e aos personagens. </li>
                             <li>Ação e Aventura:
                                 Combate, exploração e investigação são elementos centrais da jogabilidade. </li>
                             <li>Ação e Aventura: Combina elementos de combate, exploração e progressão.</li>
                             <li>Mundo Aberto:
                                 Gotham City é um vasto cenário para explorar, com diferentes ilhas e áreas. </li>
                             <li>Missões Secundárias e Desafios:
-                                Além da história principal, o jogo oferece diversas missões com foco em outros personagens e desafios com recompensas. </li>
+                                Além da história principal, o jogo oferece diversas missões com foco em outros
+                                personagens e desafios com recompensas. </li>
                         </ul>
                         <h3>Sub-Gêneros e Elementos:</h3>
                         <ul>
                             <li>Furtividade:
-                                Batman pode usar suas habilidades de furtividade para eliminar inimigos silenciosamente ou se mover sem ser detectado.</li>
+                                Batman pode usar suas habilidades de furtividade para eliminar inimigos silenciosamente
+                                ou se mover sem ser detectado.</li>
                             <li>Exploração:
-                                A vasta Gotham City oferece inúmeros locais para explorar, incluindo edifícios, becos e áreas subterrâneas.</li>
+                                A vasta Gotham City oferece inúmeros locais para explorar, incluindo edifícios, becos e
+                                áreas subterrâneas.</li>
                             <li>Jogo de Carro:
-                                O Batmóvel é um elemento central do jogo, com diversas missões e desafios que o envolvem.</li>
+                                O Batmóvel é um elemento central do jogo, com diversas missões e desafios que o
+                                envolvem.</li>
                         </ul>
                     </div>
                 </div>
             </section>
-            
+
             <aside class="game-sidebar">
                 <div class="sidebar-details">
                     <p>Desenvolvedor: <span> Rocksteady Studios, Feral Interactive, Iron Galaxy Studios</span></p>
@@ -137,7 +172,10 @@
                 </div>
                 <div class="buy-options">
                     <button class="btn btn-primary">Obter</button>
-                    <button class="btn btn-secondary">Adicionar ao Carrinho</button>
+                    <form action="/adicionar_carrinho/{{ id_jogo }}" method="GET">
+                        <button type="submit" class="btn btn-secondary">Adicionar ao Carrinho</button>
+                    </form>
+
                     <button class="btn btn-secondary">Para a lista de Desejos</button>
                 </div>
             </aside>
@@ -168,7 +206,9 @@
                 </div>
                 <div class="footer-col footer-info">
                     <h4>Informações</h4>
-                    <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade, segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.</p>
+                    <p>A Leviathan é uma loja online especializada na venda de jogos digitais. Oferecemos variedade,
+                        segurança e preços acessíveis para todos os gamers. Nosso objetivo é ser referência no mercado.
+                    </p>
                 </div>
             </div>
             <div class="social-media">
@@ -182,4 +222,5 @@
     <script src="/static/js/batman.js"></script>
 
 </body>
+
 </html>
