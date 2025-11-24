@@ -171,13 +171,18 @@
                     </div>
                 </div>
                 <div class="buy-options">
-                    <button class="btn btn-primary">Obter</button>
-                    <form action="/adicionar_carrinho/{{ id_jogo }}" method="GET">
-                        <button type="submit" class="btn btn-secondary">Adicionar ao Carrinho</button>
-                    </form>
+                <button class="btn btn-primary">Obter</button>
 
-                    <button class="btn btn-secondary">Para a lista de Desejos</button>
-                </div>
+                <form action="/adicionar_carrinho/{{ id_jogo }}" method="GET">
+                    <button type="submit" class="btn btn-secondary">Adicionar ao Carrinho</button>
+                </form>
+
+
+                <form action="/adicionar_listadesejo/{{ id_jogo }}">
+                    <button type="submit" class="btn btn-secondary">Para a Lista de Desejos</button>
+                </form>
+
+            </div>
             </aside>
         </main>
 

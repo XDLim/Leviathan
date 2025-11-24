@@ -36,6 +36,12 @@ body {
     flex-direction: column;
 }
 
+.item-preco {
+    white-space: nowrap;   /* impede quebra de linha */
+    display: inline-block; /* mantém tudo junto */
+}
+
+
 h1, h2, h3 {
     color: white;
 }
@@ -169,19 +175,28 @@ a {
     text-align: right;
 }
 
-.btn-remover {
-    background: transparent;
-    border: none;
-    color: var(--cor-erro);
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: color 0.2s;
+.item-preco-remover {
+    display: flex;
+    align-items: center;     /* alinha verticalmente */
+    gap: 15px;               /* espaço entre preço e botão */
+    justify-content: flex-end; /* joga os dois pro lado direito */
 }
 
-.btn-remover:hover {
-    color: #ff0000;
+
+.btn-remover-item {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.btn-remover-item:hover {
+    background-color: #c1121f;
+}
+
 
 #carrinho-vazio-mensagem {
     text-align: center;
@@ -274,6 +289,7 @@ a {
         flex-wrap: wrap;
         text-align: center;
         justify-content: center;
+        
     }
     .item-preco,
     .btn-remover {

@@ -1,77 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Desejos - Leviathan</title>
-    <link rel="icon" href="../static/imagens/menu/logo.png">
-    <link rel="stylesheet" href="../static/css/Desejo.css"> 
-    
+    <link rel="icon" href="{{ url_for('static', filename='imagens/menu/logo.png') }}">
+    <link rel="stylesheet" href="../static/css/Desejo.css">
 </head>
+
 <body>
-    
+
+    <video class="video-background" autoplay loop muted>
+        <source src="../static/imagens/listadesejo/minecraft.mp4" type="video/mp4">
+    </video>
+
     <header class="header_leviathan">
         <div class="header-container">
-            <a href="../templates/index.html">
-            <img src="../static/imagens/menu/logo.png" alt="">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='imagens/menu/logo.png') }}" alt="Logo Leviathan">
             </a>
         </div>
     </header>
-    
+
     <main class="main_lista_desejos_leviathan">
-        
+
         <h1 class="titulo_pagina_leviathan">Sua Lista de Desejos</h1>
-        
+
         <div class="container_itens_desejos_leviathan">
-            
-            <div class="item_desejo_leviathan" data-id="2">
-                <figure class="item_imagem_leviathan">
-                    <img src="../static/imagens/menu/Elden Ring.jpg" alt="Capa do Jogo Elden Ring">
-                </figure>
-                <div class="item_detalhes_leviathan">
-                    <h3 class="item_nome_leviathan">Elden Ring</h3>
-                    <p class="item_plataforma_leviathan">Plataforma: Multi</p>
-                    <span class="item_preco_atual_leviathan">R$ 249,90</span>
+            {% if itens %}
+                {% for item in itens %}
+                <div class="item_desejo_leviathan" data-id="{{ item.jogo_id }}">
+
+                    <div class="item_imagem">
+                        <img src="{{ item.imagem }}" alt="{{ item.nome }}">
+                    </div>
+
+                    <div class="item_detalhes_leviathan">
+                        <h3 class="item_nome_leviathan">{{ item.nome }}</h3>
+                        <p>Quantidade: {{ item.quantidade }}</p>
+                        <span class="item_preco_atual_leviathan">R$ {{ "%.2f"|format(item.preco) }}</span>
+                    </div>
+
+
+                    <form action="/remover_item_lista/{{ item.jogo_id }}" method="POST">
+                        <button class="botao-remover-item" type="submit">Remover</button>
+                    </form>
+
                 </div>
-                <div class="item_acoes_leviathan">
-                    <button class="btn_mover_carrinho_leviathan"> Mover para o Carrinho</button>
-                    <button class="btn_remover_desejo_leviathan">Remover</button>
-                </div>
-            </div>
-            
-            <div class="item_desejo_leviathan" data-id="5">
-                <figure class="item_imagem_leviathan">
-                    <img src="../static/imagens/menu/God of War.png" alt="Capa do Jogo God of War Ragnarök">
-                </figure>
-                <div class="item_detalhes_leviathan">
-                    <h3 class="item_nome_leviathan">God of War Ragnarök</h3>
-                    <p class="item_plataforma_leviathan">Plataforma: PS5/PC</p>
-                    <span class="item_preco_atual_leviathan promocao">
-                        <span class="preco_antigo_leviathan">R$ 420,92</span>
-                        R$ 199,92
-                    </span>
-                </div>
-                <div class="item_acoes_leviathan">
-                    <button class="btn_mover_carrinho_leviathan"> Mover para o Carrinho</button>
-                    <button class="btn_remover_desejo_leviathan">Remover</button>
-                </div>
-            </div>
-            
-            </div>
-        
-        <div class="acoes_gerais_desejos_leviathan">
-            <a href="../templates/index.html" class="btn_continuar_comprando_leviathan">
+                {% endfor %}
+            {% else %}
+                <p>Sua lista de desejos está vazia.</p>
+            {% endif %}
+        </div>
+
+        <div class="botoes-limpar_continuar">
+            <a href="{{ url_for('home') }}" class="btn_continuar_comprando_leviathan">
                 Continuar Comprando
             </a>
-            <button class="btn_limpar_lista_leviathan">
-                Limpar Lista
-            </button>
+
+            <form action="/limpar_lista" method="post">
+                <button class="botao-limpar-lista" type="submit">Limpar lista</button>
+            </form>
         </div>
     </main>
-    
+
     <footer class="footer_leviathan">
         <p class="copyright_leviathan">© 2025 Leviathan. Todos os direitos reservados.</p>
     </footer>
-    <script src="../static/js/Desejo.js"></script>
+
+     <script src="../static/js/listadesejo.js"></script>
+
 </body>
+
 </html>

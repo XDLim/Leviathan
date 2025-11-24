@@ -205,18 +205,152 @@ def carrinho():
     cursor.close()
     conexao.close()
 
-    # Transformando cada linha em dicionário para facilitar no template
     itens = []
+    subtotal = 0
+
     for linha in linhas:
+        preco_unit = float(linha[2])
+        quantidade = linha[4]
+        total_item = preco_unit * quantidade
+
+        subtotal += total_item
+
         itens.append({
             'jogo_id': linha[0],
             'nome': linha[1],
-            'preco': float(linha[2]),
+            'preco': preco_unit,
             'imagem': linha[3],
-            'quantidade': linha[4]
+            'quantidade': quantidade,
+            'total_item': total_item
         })
 
-    return render_template('Carrinho.html', itens=itens)
+    return render_template('Carrinho.html', itens=itens, subtotal=subtotal)
+
+# ---------- REMOVER JOGO ------------
+@app.route('/remover_item/<int:jogo_id>', methods=['POST'])
+def remover_item(jogo_id):
+    usuario_email = session.get('usuario_logado')
+    if not usuario_email:
+        return redirect('/Entrar')
+
+    conexao = conectar_bd()
+    cursor = conexao.cursor()
+    cursor.execute("DELETE FROM Carrinho WHERE usuario_email=? AND jogo_id=?", 
+        (usuario_email, jogo_id))
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+    return redirect('/carrinho')
+
+# --------- ADICIONAR A LISTA DE DESEJO -----------
+
+@app.route('/adicionar_listadesejo/<int:jogo_id>')
+def adicionar_listadesejo(jogo_id):
+    usuario_email = session.get('usuario_logado')
+    if not usuario_email:
+        return redirect('/Entrar')
+
+    conexao = conectar_bd()
+    cursor = conexao.cursor()
+
+    cursor.execute("SELECT quantidade FROM ListaDesejo WHERE usuario_email=? AND jogo_id=?", (usuario_email, jogo_id))
+    row = cursor.fetchone()
+    if row:
+        cursor.execute("UPDATE ListaDesejo SET quantidade = quantidade + 1 WHERE usuario_email=? AND jogo_id=?", (usuario_email, jogo_id))
+    else:
+        cursor.execute("INSERT INTO ListaDesejo (usuario_email, jogo_id, quantidade) VALUES (?, ?, 1)", (usuario_email, jogo_id))
+
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+    return redirect('/listadesejo')
+
+
+#-------------- PAGINA LISTA DE DESEJO -------------------
+@app.route('/listadesejo')
+def listadesejo():
+    usuario_email = session.get('usuario_logado')
+    if not usuario_email:
+        return redirect('/Entrar')
+    
+    conexao = conectar_bd()
+    cursor = conexao.cursor()
+    
+    cursor.execute("""
+    SELECT c.jogo_id, j.nome, j.preco, j.imagem, c.quantidade
+    FROM ListaDesejo c
+    JOIN Jogos j ON c.jogo_id = j.id
+    WHERE c.usuario_email=?
+    """, (usuario_email,))
+
+
+    linhas = cursor.fetchall()
+    cursor.close()
+    conexao.close()
+
+    itens = []
+    subtotal = 0
+
+    for linha in linhas:
+        preco_unit = float(linha[2])  # agora é o preço
+        quantidade = linha[4]  # cada item na lista de desejos é 1 por padrão
+        total_item = preco_unit * quantidade
+
+        subtotal += total_item
+
+        itens.append({
+            'jogo_id': linha[0],
+            'nome': linha[1],
+            'preco': preco_unit,
+            'imagem': linha[3],
+            'quantidade': quantidade,
+            'total_item': total_item
+        })
+
+
+    return render_template('desejo.html', itens=itens, subtotal=subtotal)
+
+#------------ REMOVER JOGO LISTA DE DESEJO -----------
+@app.route('/remover_item_lista/<int:jogo_id>', methods=['POST'])
+def remover_item_listadesejo(jogo_id):
+    usuario_email = session.get('usuario_logado')
+    if not usuario_email:
+        return redirect('/Entrar')
+
+    conexao = conectar_bd()
+    cursor = conexao.cursor()
+    cursor.execute("DELETE FROM ListaDesejo WHERE usuario_email=? AND jogo_id=?", 
+        (usuario_email, jogo_id))
+    
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+    return redirect('/listadesejo')
+
+# ---------- LIMPAR LISTA DE DESEJO --------------
+@app.route('/limpar_lista', methods=['POST'])
+def limpar_lista():
+    usuario_email = session.get('usuario_logado')
+    if not usuario_email:
+        return redirect('/Entrar')
+
+    conexao = conectar_bd()
+    cursor = conexao.cursor()
+
+    # Deleta todos os itens do usuário logado
+    cursor.execute("DELETE FROM ListaDesejo WHERE usuario_email = ?", (usuario_email,))
+    
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+    return redirect('/listadesejo')
+
+
+
 
 
 # ---------------- EXECUÇÃO ----------------

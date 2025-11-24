@@ -27,14 +27,24 @@
                 {% if itens %}
                     {% for item in itens %}
                     <div class="item-carrinho" data-id="{{ item.jogo_id }}">
+
                         <div class="item-imagem">
                             <img src="{{ item.imagem }}" alt="{{ item.nome }}">
                         </div>
+                        
                         <div class="item-detalhes">
                             <h3>{{ item.nome }}</h3>
                             <p>Quantidade: {{ item.quantidade }}</p>
                         </div>
-                        <div class="item-preco">R$ {{ '%.2f'|format(item.preco * item.quantidade) }}</div>
+
+                        <div class="item-preco">~
+                            R$ {{ '%.2f'|format(item.preco * item.quantidade) }}
+                        </div>
+
+                        <form action="/remover_item/{{ item.jogo_id }}" method="POST">
+                            <button class="btn-remover-item" type="submit">Remover</button>
+                        </form>
+
                     </div>
                     {% endfor %}
                 {% else %}
@@ -46,7 +56,7 @@
                 <h2>Resumo do Pedido</h2>
                 <div class="resumo-linha">
                     <span>Subtotal:</span>
-                    <span id="subtotal">R$ {{ '%.2f'|format(itens|sum(attribute='preco')) }}</span>
+                    <span id="subtotal">R$ {{ '%.2f'|format(subtotal) }}</span>
                 </div>
                 <div class="resumo-linha">
                     <span>Frete:</span>
@@ -54,8 +64,8 @@
                 </div>
                 <div class="resumo-linha total-final">
                     <strong>Total:</strong>
-                    <strong id="total-final">R$ {{ '%.2f'|format(itens|sum(attribute='preco')) }}</strong>
-                </div>
+                    <span id="total-final">R$ {{ '%.2f'|format(subtotal) }}</span>               
+                 </div>
 
                 <a href="/Finalizar" class="btn-checkout">Finalizar Compra</a>
             </aside>
