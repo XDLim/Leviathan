@@ -20,7 +20,7 @@
 }
 
 body {
-  background: linear-gradient(180deg, black, black, #2f4152, #80B1DF);
+  background: linear-gradient(180deg, black, black, #03101e, #081520);
   font-family: var(--fonte-principal);
   color: white;
   align-items: center;

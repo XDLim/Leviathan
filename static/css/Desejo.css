@@ -35,7 +35,6 @@ body {
 }
 
 .video-background {
-    opacity: 130%;
     position: fixed;
     top: 0;
     left: 0;
@@ -98,7 +97,7 @@ a {
 .container_itens_desejos_leviathan {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
     max-width: 1000px;
     margin: 0 auto 40px auto;
     background-color: var(--cor-destaque-fundo);
@@ -182,7 +181,10 @@ a {
     border: transparent;
 }
 
-
+img{
+    height: 50px;
+    width: 50px;
+}
 
 
 

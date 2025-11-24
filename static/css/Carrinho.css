@@ -36,6 +36,17 @@ body {
     flex-direction: column;
 }
 
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* envia para trás do conteúdo */
+    filter: brightness(20%);
+}
+
 .item-preco {
     white-space: nowrap;   /* impede quebra de linha */
     display: inline-block; /* mantém tudo junto */
@@ -59,7 +70,7 @@ a {
 }
 .footer_leviathan {
     background-color: var(--cor-footer);
-    padding: 4rem;
+    padding: 1.5rem;
     margin-top: auto;
 }
 .copyright_leviathan {
@@ -262,8 +273,12 @@ a {
     text-align: left;
 }
 .btn_continuar_comprando_leviathan {
-    color: var(--cor-letra-principal);
+    position: relative;
+    color: white;
     transition: color 0.2s;
+    background-color: var(--cor-botao-principal);
+    padding: 7px 15px 7px 15px;
+    border-radius: 5px;
 }
 .btn_continuar_comprando_leviathan:hover {
     color: white;

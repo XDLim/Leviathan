@@ -497,6 +497,7 @@ a{
   }
   
   .btn-secondary {
+    padding: 12px 45px 12px 45px;
     background-color: #333;
     color: #f0f0f0;
     border: 1px solid #555;
