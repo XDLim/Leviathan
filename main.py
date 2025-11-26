@@ -14,12 +14,13 @@ pool = pooling.MySQLConnectionPool(
     pool_name="meu_pool",
     pool_size=5,
     pool_reset_session=True,
-    host="yamabiko.proxy.rlwy.net",
-    database="railway",
-    user="root",
-    password="OcsXzaKGlklNLEGLjUsToGNUZePeUpaQ",
-    port=29673
+    host=os.getenv("MYSQL_HOST"),
+    database=os.getenv("MYSQL_DATABASE"),
+    user=os.getenv("MYSQL_USER"),
+    password=os.getenv("MYSQL_PASSWORD"),
+    port=int(os.getenv("MYSQL_PORT"))
 )
+
 
 def conectar_bd():
     return pool.get_connection()
@@ -290,4 +291,8 @@ def sobre():
 
 # ---------------- EXECUÇÃO ----------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    from waitress import serve
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    serve(app, host="0.0.0.0", port=port)
+
